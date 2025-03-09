@@ -1,0 +1,8 @@
+.container_servicio {
+    min-height: 200px;
+    padding: 10px 20px;
+    /* border-bottom: 1px solid #ccc;     */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

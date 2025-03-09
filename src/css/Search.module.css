@@ -1,0 +1,31 @@
+.containerSearch {
+    text-align: center;
+    width: 100%;
+    margin-top:10px ; 
+}
+.containerInput{
+    position: relative;
+    background: rgb(204, 204, 204) ;
+    display: inline-flex ;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center   ; 
+    gap: 5px;
+    padding: 10px 5px ;
+    border-radius: 5px;
+    min-width: 250px ;
+    max-width: 350px;
+    
+}
+
+.containerInput input {
+    background:transparent; 
+    border: 0;
+    font-family: 'Poppins',sans-serif; 
+    font-size: 16px ;
+}
+
+.containerInput input:focus{
+    border: 0;
+    outline: none;
+}

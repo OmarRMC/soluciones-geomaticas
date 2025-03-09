@@ -1,0 +1,7 @@
+.boxVolver{
+    display: flex;
+    align-items: center;
+    color: #1764aa;
+    font-weight: bold;
+    margin: 12px 12px;
+}

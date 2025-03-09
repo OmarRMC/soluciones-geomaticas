@@ -1,0 +1,77 @@
+.container_servicio {
+    padding: 20px 30px;
+
+}
+
+.container_actividades {
+    margin: 20px 0px;
+}
+
+.actividades {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.actividades ul {
+    list-style: none;
+    padding: 0;
+}
+
+.actividades ul li {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.actividades ul li svg {
+    color: rgb(3, 57, 73);
+}
+
+.actividades>picture {
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+
+.actividades>picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    border-radius: 5px;
+}
+
+.actividades>div {}
+
+@media screen and (max-width: 650px) {
+    .actividades {
+        flex-direction: column;
+        min-height: 450px;  
+        background-image: url(../Assets/img/services/Geo1.webp);
+        background-size: cover;
+        background-position: center;
+        color: black;
+    }
+
+    .actividades>picture {
+        display: none;
+    }
+    
+
+    .actividades div {
+        background: rgba(157, 159, 161, 0.788);
+        /* position: absolute; */
+        width: 90%;
+        margin: auto;
+        /* left: 50%; */
+        /* transform: translateX(-50%); */
+        padding: 5px;
+        border-radius: 4px;
+    }
+    
+}

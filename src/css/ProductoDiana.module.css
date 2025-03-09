@@ -1,0 +1,21 @@
+.containerProducto{
+    padding: 30px;
+    text-align: justify;
+}
+.containerProducto>h4{
+    text-align: center;
+    color: blue;
+}
+
+.contanierImg{
+    text-align: center;
+    margin: 12px;
+    
+}
+.image{
+    width: 80%;
+    min-width: 280px;
+    border-radius: 2px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;    
+}

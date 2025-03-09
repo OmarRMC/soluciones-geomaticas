@@ -1,0 +1,133 @@
+
+:root{
+	--NavH: 80px ;
+}
+.ContentLogo{
+   width: 200px;
+   overflow: hidden;
+   height: 100%;
+   display: flex;
+   align-items: center
+}
+.ContentLogo > img {
+   width: 30%;
+
+}
+.enlaces {
+   display: flex ; 
+   gap:25px;  
+   font-size: 18px;
+}
+.button{
+   visibility: hidden;
+}
+.ContentHeader{
+    position: fixed;
+    top:0px ;
+    /*background:linear-gradient(45deg , rgb(17, 56, 165) , rgb(16, 160, 153)) ;*/
+    background: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 2;
+    padding: 10px 30px ;
+    height: var(--NavH);    
+    display: flex ; 
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 1px 1px 10px rgb(82, 82, 82) ;
+}
+ 
+ .enlaces  a {
+   text-decoration: none;
+   color : rgb(0, 0, 0);       
+   font-size: 1em;   
+   
+   /*border-bottom: 2px solid darkcyan; */
+ 
+ }
+
+ .linea{
+    position: absolute ; 
+    height: 0px ; 
+    width : 0% ;
+    
+    background : rgb(22, 89, 165) ; 
+    bottom: -1px ; 
+    left: 50% ; 
+    border-radius: 20px ; 
+    animation-name: AnimationLine;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;  
+    opacity: 0; 
+    animation-timing-function: ease-in-out; 
+ }
+
+ @keyframes AnimationLine{
+  0% {
+    opacity: 0; 
+    height: 0px ;
+    left: 50% ;  
+  }
+  100% {
+   opacity: 1; 
+   height: 3px ; 
+   width : 120% ;
+   left: -10% ; 
+  }
+ }
+ .link {
+   
+   display: inline-flex ; 
+   height: var(--NavH);    
+   flex-wrap: wrap ; 
+   align-content: center ; 
+   position : relative ;
+ }
+
+ @keyframes AnimationLine650 {
+   0%{
+     width: 120%;
+     height: 1px ; 
+   }
+   100%{
+    opacity: 1; 
+    width: 80%;
+    height: 3px ; 
+    left:0.2%; 
+   }
+
+ }
+ @media screen and (max-width: 650px){
+   .ContentHeader{
+      justify-content:space-between; 
+   }
+   .enlaces{
+      background: rgb(255, 254, 254) ;
+      flex-direction: column;
+      position: absolute;
+      top: var(--NavH);
+      right: -50%;
+      height: 100vh;
+      width:40%; 
+      transition: all 0.5s ease-in-out ;
+      gap: 12px ; 
+      padding: 0px 20px ;
+      font-size: 15px;
+   }
+   .enlaces.activado{
+      right: 0%;      
+   }
+
+   .button{
+      visibility: visible;
+      z-index: 20;
+   }
+   .linea{
+      animation-name: AnimationLine650;
+      
+      
+   }
+   .link {
+      height:35px ;  
+   }
+ }

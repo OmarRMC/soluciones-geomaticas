@@ -1,7 +1,11 @@
+
 .App {
   text-align: center;
 }
-
+.body {
+  min-height: calc(100vh - var(--NavH));
+  overflow: hidden ; 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +39,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.H1Bing{
+  opacity: 0;
+  position: absolute;
+  
 }
