@@ -1,0 +1,108 @@
+.tableContainer {
+    width: 95%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.tableTitle {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.productTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.productTable th,
+.productTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.productTable th {
+    background: #0056b3;
+    color: white;
+    font-size: 13px;
+}
+
+.productTable tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: background 0.3s;
+    margin-top: 15px;
+}
+
+.backButton:hover {
+    background: #003f80;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .tableContainer {
+        padding: 15px;
+    }
+
+    .tableTitle {
+        font-size: 16px;
+    }
+
+    .productTable th,
+    .productTable td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .backButton {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tableContainer {
+        padding: 10px;
+    }
+
+    .tableTitle {
+        font-size: 14px;
+    }
+
+    .productTable th,
+    .productTable td {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .backButton {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}

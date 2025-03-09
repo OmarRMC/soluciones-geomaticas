@@ -46,7 +46,7 @@ function Navar() {
           <span className={`${(select.servicios) ? style.linea : ""}`}></span>
         </div>
         <div className={style.link}>
-          <Link onClick={() => { setBarra(!barra) }} to="/Productos/Diana" ><span >Productos</span></Link>
+          <Link onClick={() => { setBarra(!barra) }} to="/Producto" ><span >Productos</span></Link>
           <span className={`${(select.productos) ? style.linea : ""}`}></span>
         </div>
         <div className={style.link}>
