@@ -9,8 +9,8 @@ import IconButton from '@mui/material/IconButton';
 import '../css/Slider.css';
 
 
-//import img1 from ['../media/img/img1.jpg','../media/img/img1.jpg','../media/img/img1.jpg']
-const ListImg = require.context('../Assets/img/Slider');
+const sliderImages = import.meta.glob('../Assets/img/Slider/*', { eager: true, query: '?url', import: 'default' });
+const ListImg = (path) => sliderImages[`../Assets/img/Slider/${path.replace('./', '')}`];
 function Slider() {
 
     const navigation = useNavigate();
