@@ -1,40 +1,55 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --fuente:'Signika Negative', 'sans-serif';
-  --ColorPrimario: #00a7ff; 
+  --NavH: 80px;
+  --fuente: 'Open Sans', Arial, sans-serif;
+  --ColorPrimario: #2EA3F2;
+  --primary: #2EA3F2;
+  --primary-dark: #1a7bc4;
+  --dark: #1a1a2e;
+  --dark-secondary: #16162a;
+  --heading: #1a1a2e;
+  --body: #5a6370;
+  --muted: #8a94a0;
+  --border: #e8ecf1;
+  --bg-alt: #f5f7fa;
+  --white: #ffffff;
 }
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family:  'Poppins', sans-serif !important;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--NavH);
 }
-h2{
-  color: #2c3e50;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', Arial, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading);
 }
 
 body {
   margin: 0;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  margin-top: var(--NavH);
   -webkit-font-smoothing: antialiased;
-  font-family: var(--fuente); 
-  /* background: #eef5fe;   */
-  background-color: #f8f9fa;
-  color: #7f8c8d;
+  position: relative;
+  font-family: var(--fuente);
+  background-color: var(--white);
+  color: var(--body);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='1800' viewBox='0 0 900 1800'%3E%3Cg fill='none' stroke='%23e8ecf1' stroke-width='0.8'%3E%3Cpath d='M420,310 C455,295 510,288 548,302 C590,318 612,358 608,398 C604,435 575,468 538,488 C498,510 445,518 405,502 C362,485 338,448 340,408 C342,368 370,332 420,310Z'/%3E%3Cpath d='M390,240 C448,210 535,195 600,222 C670,252 714,318 708,392 C702,460 660,525 598,565 C530,608 440,622 370,596 C296,568 248,504 250,430 C252,356 300,280 390,240Z'/%3E%3Cpath d='M355,168 C438,125 558,105 648,145 C748,190 815,280 808,385 C800,485 745,582 660,640 C568,702 445,722 350,685 C250,646 182,560 185,458 C188,355 240,225 355,168Z'/%3E%3Cpath d='M320,95 C428,38 582,12 698,65 C828,125 918,242 910,380 C902,515 830,645 722,722 C608,802 455,830 332,782 C205,732 115,622 118,492 C122,360 192,168 320,95Z'/%3E%3Cpath d='M180,780 C215,762 268,758 308,775 C352,795 378,838 372,882 C366,922 335,958 295,975 C252,994 198,998 162,978 C124,958 105,920 110,882 C115,845 138,802 180,780Z'/%3E%3Cpath d='M155,710 C210,682 290,672 348,700 C412,732 450,798 442,868 C434,932 392,992 332,1022 C268,1054 185,1060 125,1030 C62,998 28,938 35,872 C42,808 85,745 155,710Z'/%3E%3Cpath d='M130,638 C205,598 315,585 396,622 C485,665 535,758 525,855 C515,948 458,1038 378,1078 C292,1122 180,1130 95,1090 C6,1048 -40,960 -30,868 C-20,778 42,688 130,638Z'/%3E%3Cpath d='M620,1100 C658,1085 712,1082 752,1098 C798,1118 828,1160 822,1205 C816,1248 785,1286 742,1305 C696,1326 638,1330 598,1310 C556,1290 532,1250 538,1208 C544,1168 575,1120 620,1100Z'/%3E%3Cpath d='M595,1032 C652,1005 735,998 795,1028 C862,1062 905,1130 898,1202 C890,1272 845,1338 782,1370 C714,1405 625,1412 562,1378 C496,1342 458,1278 465,1208 C472,1140 522,1068 595,1032Z'/%3E%3Cpath d='M565,960 C645,922 755,912 835,952 C925,998 980,1092 972,1192 C964,1288 905,1382 822,1425 C732,1472 618,1480 535,1438 C448,1395 400,1305 408,1210 C416,1118 485,1010 565,960Z'/%3E%3Cpath d='M700,1520 C730,1508 772,1505 804,1518 C840,1534 862,1568 858,1604 C854,1638 832,1668 800,1682 C766,1698 722,1700 692,1685 C660,1670 642,1640 646,1606 C650,1574 668,1536 700,1520Z'/%3E%3Cpath d='M678,1468 C722,1448 785,1442 830,1462 C880,1486 912,1535 908,1588 C904,1638 872,1686 828,1708 C780,1732 718,1736 672,1714 C624,1690 598,1642 602,1590 C606,1540 630,1492 678,1468Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 900px 1800px;
+  background-repeat: repeat;
 }
 
-
-body::-webkit-scrollbar{
-  width: 2px ;
-/*  background:  red ;*/
+body::-webkit-scrollbar {
+  width: 2px;
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background:#5f5f5f; 
-  /*border-right: 2px solid rgba(73, 73, 73, 0.863);*/
+  background: var(--muted);
 }

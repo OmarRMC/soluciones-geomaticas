@@ -1,8 +1,268 @@
-.container_servicio {
-    min-height: 200px;
-    padding: 10px 20px;
-    /* border-bottom: 1px solid #ccc;     */
-    display: flex;
+/* Section layout */
+.section {
+  padding: 70px 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--heading, #1a1a2e);
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary, #2EA3F2);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.sectionSubtitle {
+  font-size: 1rem;
+  color: var(--body, #5a6370);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ============ CTA Section ============ */
+.ctaSection {
+  background: var(--dark, #1a1a2e);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: rgba(46, 163, 242, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ctaSection::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(46, 163, 242, 0.04);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ctaContainer {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left side */
+.ctaLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ctaTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(46, 163, 242, 0.12);
+  color: var(--primary, #2EA3F2);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.ctaText {
+  font-size: 0.95rem;
+  color: var(--muted, #8a94a0);
+  line-height: 1.7;
+}
+
+/* Contact info items */
+.ctaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 4px 0;
+}
+
+.ctaInfoItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ctaInfoItem i,
+.ctaInfoItem svg {
+  color: var(--primary, #2EA3F2);
+  width: 16px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.ctaButtons {
+  display: flex;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.ctaBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--primary, #2EA3F2);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ctaBtnPrimary:hover {
+  background: var(--primary-dark, #1a7bc4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 163, 242, 0.3);
+}
+
+.ctaBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ctaBtnOutline:hover {
+  border-color: var(--primary, #2EA3F2);
+  color: var(--primary, #2EA3F2);
+  transform: translateY(-2px);
+}
+
+/* Right side - Google Maps */
+.ctaRight {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mapWrapper {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mapWrapper iframe {
+  display: block;
+}
+
+.mapLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary, #2EA3F2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mapLink:hover {
+  color: #fff;
+}
+
+/* ============ Responsive ============ */
+@media screen and (max-width: 900px) {
+  .ctaContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mapWrapper {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section {
+    padding: 50px 15px;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .ctaSection {
+    padding: 50px 15px;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+
+  .ctaButtons {
     flex-direction: column;
+  }
+
+  .ctaBtnPrimary,
+  .ctaBtnOutline {
     justify-content: center;
+  }
+
+  .mapWrapper {
+    height: 220px;
+  }
 }

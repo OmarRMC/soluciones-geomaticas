@@ -1,77 +1,162 @@
 .container_servicio {
-    padding: 20px 30px;
+  padding: 30px 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
 
+.descripcion h4 {
+  font-size: 1.3rem;
+  color: var(--heading, #1a1a2e);
+  margin-bottom: 12px;
+}
+
+.descripcion p {
+  font-size: 0.95rem;
+  color: var(--body, #5a6370);
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
 .container_actividades {
-    margin: 20px 0px;
+  margin: 25px 0;
 }
 
 .actividades {
-    display: flex;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
 }
 
 .actividades ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .actividades ul li {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    margin: 5px 0px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: var(--body, #5a6370);
 }
 
 .actividades ul li svg {
-    color: rgb(3, 57, 73);
+  color: var(--primary, #2EA3F2);
+  font-size: 20px;
+  flex-shrink: 0;
 }
 
-.actividades>picture {
-    padding: 10px;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    max-width: 400px;
+.actividades h4 {
+  font-size: 1.1rem;
+  color: var(--heading, #1a1a2e);
+  margin-bottom: 15px;
 }
 
-
-.actividades>picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right center;
-    border-radius: 5px;
+.actividades > picture {
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 400px;
+  flex-shrink: 0;
 }
 
-.actividades>div {}
+.actividades > picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  border-radius: 8px;
+}
+
+.galeria h3 {
+  font-size: 1.2rem;
+  color: var(--heading, #1a1a2e);
+  margin-top: 30px;
+}
+
+/* CTA Service */
+.ctaService {
+  background: var(--bg-alt, #f5f7fa);
+  padding: 50px 30px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.ctaService h3 {
+  font-size: 1.4rem;
+  color: var(--heading, #1a1a2e);
+  margin-bottom: 8px;
+}
+
+.ctaService p {
+  color: var(--body, #5a6370);
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.ctaBtnPrimary:hover {
+  background: #1fb855;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.ctaBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--primary, #2EA3F2);
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--primary, #2EA3F2);
+  transition: all 0.3s ease;
+}
+
+.ctaBtnOutline:hover {
+  background: var(--primary, #2EA3F2);
+  color: #fff;
+  transform: translateY(-2px);
+}
 
 @media screen and (max-width: 650px) {
-    .actividades {
-        flex-direction: column;
-        min-height: 450px;  
-        background-image: url(../Assets/img/services/Geo1.webp);
-        background-size: cover;
-        background-position: center;
-        color: black;
-    }
+  .actividades {
+    flex-direction: column;
+    min-height: auto;
+    gap: 15px;
+  }
 
-    .actividades>picture {
-        display: none;
-    }
-    
+  .actividades > picture {
+    max-width: 100%;
+  }
 
-    .actividades div {
-        background: rgba(157, 159, 161, 0.788);
-        /* position: absolute; */
-        width: 90%;
-        margin: auto;
-        /* left: 50%; */
-        /* transform: translateX(-50%); */
-        padding: 5px;
-        border-radius: 4px;
-    }
-    
+  .container_servicio {
+    padding: 20px 15px;
+  }
 }

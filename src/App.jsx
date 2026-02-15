@@ -11,23 +11,24 @@ import Productos from './Routes/Productos';
 import ProductCatalog from './Components/product/ProductCatalog'
 import DetalleCurso from './Routes/DetalleCurso';
 import BlogView from './Routes/BlogView';
+import WhatsAppFloat from './Components/WhatsAppFloat';
 
 function App() {
 
   return (<>
     <Navar />
-    {/* <h1 className="H1Bing">Servicios de topografia, geomaticas , fotogrametria y sistemas de informacion geografica UMSA</h1> */}
+    <WhatsAppFloat />
     <main className="body">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Cursos" element={<Cursos />} />
-        <Route path="/Cursos/:id" element={<DetalleCurso />} />
-        <Route path="/Servicios" element={<Servicios />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/Servicio/:Service_id" element={<BlogView />} />
-        <Route path="/Productos/:producto_id" element={<Productos />} />
-        <Route path="/Producto/:title" element={<ProductCatalog />} />
-        <Route path="/Producto/" element={<Productos />} />
+        <Route path="/cursos" element={<Cursos />} />
+        <Route path="/cursos/:id" element={<DetalleCurso />} />
+        <Route path="/servicios" element={<Servicios />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/servicio/:service_id" element={<BlogView />} />
+        <Route path="/productos/:producto_id" element={<Productos />} />
+        <Route path="/producto/:title" element={<ProductCatalog />} />
+        <Route path="/producto/" element={<Productos />} />
       </Routes>
     </main>
     <Footer></Footer>

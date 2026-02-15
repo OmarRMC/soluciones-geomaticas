@@ -1,4 +1,3 @@
-
 import style from '../css/Cursos.module.css'
 import img1 from '../Assets/img/curso1.jpg'
 import img2 from '../Assets/img/curso2.jpg'
@@ -8,8 +7,9 @@ import Zoom from '@mui/material/Zoom';
 import Search from '../Components/Search'
 import { useEffect, useState } from 'react'
 import {  useNavigate } from 'react-router-dom'
-import servidor from './Server.js'; 
+import servidor from './Server.js';
 import Loading from '../Components/Loading'
+import bannerStyle from '../css/ContanerServicio.module.css'
 function Cursos() {
 
 
@@ -64,6 +64,10 @@ function Cursos() {
 
     return (
         <>
+            <div className={bannerStyle.banner}>
+                <h1 className={bannerStyle.bannerTitle}>Cursos y Capacitacion</h1>
+                <p className={bannerStyle.breadcrumb}>inicio / cursos</p>
+            </div>
             <Search search={filtrar} />
             <main className={style.main}>
 
