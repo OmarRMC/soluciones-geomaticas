@@ -1,33 +1,288 @@
 .containerRecurso {
-    position: relative;
-    top: 5px;
     display: flex;
-    gap: 12px;
+    gap: 16px;
     flex-direction: column;
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 16px 0 40px;
 }
 
+/* --- 404 --- */
+.page404 {
+    text-align: center;
+    padding: 60px 0;
+    color: #666;
+}
+.page404 h2 {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+/* --- Cabecera del curso --- */
+.cursoHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.cursoImagen {
+    width: 100%;
+    border-radius: 12px;
+}
+.cursoImagen img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 300px;
+}
+.cursoHeaderInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.cursoTitulo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0;
+}
+.cursoDescripcion {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Meta info (duracion, lecciones, nivel, etc.) --- */
+.cursoMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 4px;
+}
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: #666;
+    background: #f5f5f5;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* --- Precio y certificado --- */
+.cursoPrecio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2EA3F2;
+    margin: 4px 0 0;
+}
+.cursoCertificado {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #fff;
+    background: #4caf50;
+    padding: 3px 10px;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+/* --- Secciones generales --- */
+.seccion {
+    margin-top: 8px;
+}
+.seccionTitulo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* --- Instructor --- */
+.instructorCard {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.instructorAvatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.instructorAvatarPlaceholder {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+.instructorNombre {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    margin: 0;
+}
+.instructorBio {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 2px 0 0;
+}
+
+/* --- Objetivos --- */
+.listaObjetivos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.listaObjetivos li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* --- Requisitos --- */
+.listaRequisitos {
+    padding-left: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.listaRequisitos li {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- Software tags --- */
+.softwareTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.softwareTag {
+    font-size: 0.82rem;
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-weight: 500;
+}
+
+/* --- Modulos --- */
+.modulosLista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.moduloCard {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px;
+    background: #fafafa;
+    border-radius: 8px;
+    border-left: 3px solid #2EA3F2;
+}
+.moduloNumero {
+    min-width: 32px;
+    height: 32px;
+    background: #2EA3F2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+.moduloInfo {
+    flex: 1;
+}
+.moduloTitulo {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    margin: 0;
+}
+.moduloDescripcion {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 4px 0 0;
+}
+.moduloMeta {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+.moduloMeta span {
+    font-size: 0.78rem;
+    color: #999;
+}
+
+/* --- Recursos (existente, mejorado) --- */
 .boxRecurso {
     background: var(--primary, #2EA3F2);
     border-radius: 8px;
     padding: 12px 15px;
     color: white;
-    overflow: hidden;
     cursor: pointer;
     box-shadow: 0 2px 10px rgba(26, 26, 46, 0.08);
     transition: all 0.3s ease;
+    margin-bottom: 8px;
 }
-
 .boxRecurso:hover {
-    background: var(--primary-dark, #1a7bc4);
     transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(26, 26, 46, 0.14);
 }
-
 .enlaceRecurso {
     background: white;
     color: var(--heading, #1a1a2e);
     padding: 2px 8px;
     border-radius: 4px;
+}
+
+/* --- Contacto --- */
+.contactoCard {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 14px 16px;
+    border-left: 3px solid #2EA3F2;
+}
+.contactoCard p {
+    font-size: 0.9rem;
+    color: #444;
+    margin: 6px 0;
+}
+.contactoCard strong {
+    color: #1a1a2e;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .containerRecurso {
+        width: 92%;
+    }
+    .cursoTitulo {
+        font-size: 1.3rem;
+    }
+    .cursoMeta {
+        gap: 8px;
+    }
+    .instructorCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

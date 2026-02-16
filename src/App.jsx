@@ -26,8 +26,8 @@ function App() {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/servicio/:service_id" element={<BlogView />} />
+        <Route path="/productos/catalogo/:title" element={<ProductCatalog />} />
         <Route path="/productos/:producto_id" element={<Productos />} />
-        <Route path="/productos/:title" element={<ProductCatalog />} />
         <Route path="/productos/" element={<Productos />} />
       </Routes>
     </main>

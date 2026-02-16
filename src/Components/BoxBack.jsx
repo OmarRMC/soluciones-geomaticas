@@ -1,20 +1,17 @@
-import { useParams , useNavigate, useSearchParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import ArrowBackIosNewSharpIcon from '@mui/icons-material/ArrowBackIosNewSharp';
 import IconButton from '@mui/material/IconButton';
 import style from "../css/BoxBack.module.css";
 
-function BoxBack(params) {
-    const navigate = useNavigate(); 
+function BoxBack() {
+    const navigate = useNavigate();
     return (
-        <header className={style.boxVolver}>
-                
-        <IconButton  className={style.prev}  onClick={(e) => {navigate(-1) }}>
-            <ArrowBackIosNewSharpIcon  />
-        </IconButton>
-        <p>Volver</p>
-        
+        <header className={style.boxVolver} onClick={() => navigate(-1)} style={{ cursor: 'pointer' }}>
+            <IconButton className={style.prev}>
+                <ArrowBackIosNewSharpIcon />
+            </IconButton>
+            <p>Volver</p>
         </header>
-
     )
 }
 
