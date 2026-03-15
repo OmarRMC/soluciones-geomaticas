@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Soluciones Geomaticas",
+  "name": "Soluciones Geomaticas - Topografia, Geodesia, Fotogrametria y SIG",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,11 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#2EA3F2",
+  "background_color": "#ffffff",
+  "description": "Servicios profesionales de topografia, geodesia, fotogrametria con drones y sistemas de informacion geografica en Bolivia.",
+  "lang": "es",
+  "orientation": "any"
 }

@@ -27,7 +27,7 @@ const ProductCard = ({ title, image, description, tags }) => {
               ))}
             </div>
           )}
-          <Link to={`/producto/${title}`} className={styles.catalogButton}>Catalogo &gt;</Link>
+          <Link to={`/productos/${title}`} className={styles.catalogButton}>Catalogo &gt;</Link>
         </div>
       </div>
     </div>

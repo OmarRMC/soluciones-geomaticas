@@ -27,8 +27,8 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/servicio/:service_id" element={<BlogView />} />
         <Route path="/productos/:producto_id" element={<Productos />} />
-        <Route path="/producto/:title" element={<ProductCatalog />} />
-        <Route path="/producto/" element={<Productos />} />
+        <Route path="/productos/:title" element={<ProductCatalog />} />
+        <Route path="/productos/" element={<Productos />} />
       </Routes>
     </main>
     <Footer></Footer>

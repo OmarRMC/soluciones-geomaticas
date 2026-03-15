@@ -7,37 +7,65 @@
 
 <url>
   <loc>https://soluciones-geomaticas.web.app/</loc>
-  <lastmod>2023-07-21T17:38:35+00:00</lastmod>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 
 <url>
-  <loc>https://soluciones-geomaticas.web.app/Servicios/</loc>
-  <lastmod>2023-07-21T17:38:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/Productos/Diana/</loc>
-  <lastmod>2023-07-21T17:38:35+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://soluciones-geomaticas.web.app/servicios</loc>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
 </url>
 
 <url>
-  <loc>https://soluciones-geomaticas.web.app/Blog/</loc>
-  <lastmod>2023-07-21T17:38:35+00:00</lastmod>
+  <loc>https://soluciones-geomaticas.web.app/servicio/fotogrametria</loc>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://soluciones-geomaticas.web.app/Cursos/</loc>
-  <lastmod>2023-07-21T17:38:35+00:00</lastmod>
+  <loc>https://soluciones-geomaticas.web.app/servicio/topografia</loc>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 
+<url>
+  <loc>https://soluciones-geomaticas.web.app/servicio/geodesia</loc>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
 
+<url>
+  <loc>https://soluciones-geomaticas.web.app/servicio/sig</loc>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
 
+<url>
+  <loc>https://soluciones-geomaticas.web.app/productos</loc>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
 
+<url>
+  <loc>https://soluciones-geomaticas.web.app/blog</loc>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://soluciones-geomaticas.web.app/cursos</loc>
+  <lastmod>2026-03-15</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
 
 </urlset>

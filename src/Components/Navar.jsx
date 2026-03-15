@@ -51,7 +51,7 @@ function Navar() {
       </div>
       <nav className={`${style.enlaces} ${barra ? style.activado : ''}`}>
         <div className={style.link}>
-          <Link onClick={() => setBarra(false)} to="/"><span>Somos</span></Link>
+          <Link onClick={() => setBarra(false)} to="/"><span>Home</span></Link>
           <span className={select.somos ? style.linea : ""}></span>
         </div>
         <div className={style.link}>
@@ -59,7 +59,7 @@ function Navar() {
           <span className={select.servicios ? style.linea : ""}></span>
         </div>
         <div className={style.link}>
-          <Link onClick={() => setBarra(false)} to="/producto"><span>Productos</span></Link>
+          <Link onClick={() => setBarra(false)} to="/productos"><span>Productos</span></Link>
           <span className={select.producto ? style.linea : ""}></span>
         </div>
         <div className={style.link}>
