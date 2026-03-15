@@ -10,23 +10,24 @@
 }
 
 .boxRecurso {
-
-    background: #1782a1;
-    border-radius: 5px;
-    padding: 10px;
+    background: var(--primary, #2EA3F2);
+    border-radius: 8px;
+    padding: 12px 15px;
     color: white;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 1px 1px 5px rgb(143, 143, 143);
-    transition-duration: 0.5s;
+    box-shadow: 0 2px 10px rgba(26, 26, 46, 0.08);
+    transition: all 0.3s ease;
 }
 
 .boxRecurso:hover {
-    background: #1764aa;
+    background: var(--primary-dark, #1a7bc4);
+    transform: translateY(-2px);
 }
-.enlaceRecurso{
+
+.enlaceRecurso {
     background: white;
-    color: black;
-    padding: 0px 5px ;
-    border-radius: 5px;
+    color: var(--heading, #1a1a2e);
+    padding: 2px 8px;
+    border-radius: 4px;
 }

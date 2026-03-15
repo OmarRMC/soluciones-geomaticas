@@ -1,67 +1,77 @@
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import KeyboardDoubleArrowRightOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowRightOutlined';
+import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import style from '../css/Navar.module.css';
 import logo from '../Assets/img/LOGO.png'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from 'react';
+
+const routeMap = {
+  '': 'somos',
+  'servicios': 'servicios',
+  'servicio': 'servicios',
+  'producto': 'producto',
+  'productos': 'producto',
+  'cursos': 'cursos',
+  'blog': 'blog',
+};
+
 function Navar() {
   const [barra, setBarra] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const [select, setSelect] = useState({ "somos": true, "producto": false, "servicios": false, "cursos": false, "blog": false });
 
-  const [select, setSelect] = useState({ "Somos": true, "productos": false, "servicios": false, "cursos": false, "blog": false });
-  let valInicial = { "Somos": false, "productos": false, "servicios": false, "cursos": false, "blog": false }
   useEffect(() => {
-    var cadena = window.location.pathname.substring(1).toLowerCase();
-    if (cadena === "") {
-      cadena = "Somos"
-    }
-    let ok = valInicial;
-    ok[cadena] = true;
-    setSelect(ok)
+    const segment = location.pathname.split('/')[1]?.toLowerCase() || '';
+    const key = routeMap[segment] || 'somos';
+    const ok = { somos: false, producto: false, servicios: false, cursos: false, blog: false };
+    ok[key] = true;
+    setSelect(ok);
+  }, [location]);
 
-  }, [barra]);
-
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-
-    <header className={style.ContentHeader}>
+    <header className={`${style.ContentHeader} ${scrolled ? style.scrolled : ''}`}>
       <div className={style.ContentLogo}>
-        <img src={logo} alt=""></img>
+        <img src={logo} alt="Soluciones Geomaticas" />
         <div>
-          <span>GeoScien</span>
+          <Link to="/" className={style.brand}>Soluciones Geomaticas</Link>
         </div>
       </div>
       <div className={style.button}>
-        <IconButton onClick={(e) => { setBarra(!barra) }}>
-          {(barra) ? <KeyboardDoubleArrowRightOutlinedIcon /> : <MenuOutlinedIcon />}
+        <IconButton onClick={() => setBarra(!barra)}>
+          {barra ? <CloseIcon /> : <MenuOutlinedIcon />}
         </IconButton>
       </div>
-      <div className={`${style.enlaces}  ${(barra) ? style.activado : ''}`}>
+      <nav className={`${style.enlaces} ${barra ? style.activado : ''}`}>
         <div className={style.link}>
-          <Link onClick={() => { setBarra(!barra) }} to="/"  ><span >Somos</span></Link>
-          <span className={`${(select.Somos) ? style.linea : ""}`}></span>
+          <Link onClick={() => setBarra(false)} to="/"><span>Somos</span></Link>
+          <span className={select.somos ? style.linea : ""}></span>
         </div>
         <div className={style.link}>
-          <Link onClick={() => { setBarra(!barra) }} to="/Servicios" ><span >Servicios</span></Link>
-          <span className={`${(select.servicios) ? style.linea : ""}`}></span>
+          <Link onClick={() => setBarra(false)} to="/servicios"><span>Servicios</span></Link>
+          <span className={select.servicios ? style.linea : ""}></span>
         </div>
         <div className={style.link}>
-          <Link onClick={() => { setBarra(!barra) }} to="/Producto" ><span >Productos</span></Link>
-          <span className={`${(select.productos) ? style.linea : ""}`}></span>
+          <Link onClick={() => setBarra(false)} to="/producto"><span>Productos</span></Link>
+          <span className={select.producto ? style.linea : ""}></span>
         </div>
         <div className={style.link}>
-
-          <Link onClick={() => { setBarra(!barra) }} to="/Cursos" ><span >Cursos</span></Link>
-          <span className={`${(select.cursos) ? style.linea : ""}`}></span>
+          <Link onClick={() => setBarra(false)} to="/cursos"><span>Cursos</span></Link>
+          <span className={select.cursos ? style.linea : ""}></span>
         </div>
         <div className={style.link}>
-          <Link onClick={() => { setBarra(!barra) }} to="/Blog" ><span > Blog</span></Link>
-          <span className={`${(select.blog) ? style.linea : ""}`}></span>
+          <Link onClick={() => setBarra(false)} to="/blog"><span>Blog</span></Link>
+          <span className={select.blog ? style.linea : ""}></span>
         </div>
-
-      </div>
+      </nav>
     </header>
-
   );
 }
 

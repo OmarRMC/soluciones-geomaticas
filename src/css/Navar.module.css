@@ -1,133 +1,167 @@
+.ContentHeader {
+  position: fixed;
+  top: 0;
+  background: var(--white, #ffffff);
+  width: 100%;
+  z-index: 100;
+  padding: 0 40px;
+  height: var(--NavH);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 5px rgba(26, 26, 46, 0.08);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
 
-:root{
-	--NavH: 80px ;
+.scrolled {
+  box-shadow: 0 4px 20px rgba(26, 26, 46, 0.12);
 }
-.ContentLogo{
-   width: 200px;
-   overflow: hidden;
-   height: 100%;
-   display: flex;
-   align-items: center
+
+.ContentLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
 }
+
 .ContentLogo > img {
-   width: 30%;
-
+  width: 45px;
+  height: auto;
 }
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--heading, #1a1a2e);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  transition: color 0.3s ease;
+}
+
+.brand:hover {
+  color: var(--primary, #2EA3F2);
+}
+
+.button {
+  visibility: hidden;
+  display: none;
+}
+
 .enlaces {
-   display: flex ; 
-   gap:25px;  
-   font-size: 18px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
-.button{
-   visibility: hidden;
-}
-.ContentHeader{
-    position: fixed;
-    top:0px ;
-    /*background:linear-gradient(45deg , rgb(17, 56, 165) , rgb(16, 160, 153)) ;*/
-    background: rgb(255, 255, 255);
-    width: 100%;
-    z-index: 2;
-    padding: 10px 30px ;
-    height: var(--NavH);    
-    display: flex ; 
-    gap: 20px;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 1px 1px 10px rgb(82, 82, 82) ;
-}
- 
- .enlaces  a {
-   text-decoration: none;
-   color : rgb(0, 0, 0);       
-   font-size: 1em;   
-   
-   /*border-bottom: 2px solid darkcyan; */
- 
- }
 
- .linea{
-    position: absolute ; 
-    height: 0px ; 
-    width : 0% ;
-    
-    background : rgb(22, 89, 165) ; 
-    bottom: -1px ; 
-    left: 50% ; 
-    border-radius: 20px ; 
-    animation-name: AnimationLine;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;  
-    opacity: 0; 
-    animation-timing-function: ease-in-out; 
- }
+.enlaces a {
+  text-decoration: none;
+  color: var(--body, #5a6370);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
- @keyframes AnimationLine{
+.enlaces a:hover {
+  color: var(--primary, #2EA3F2);
+}
+
+.link {
+  display: inline-flex;
+  height: var(--NavH);
+  flex-wrap: wrap;
+  align-content: center;
+  position: relative;
+}
+
+.linea {
+  position: absolute;
+  height: 0;
+  width: 0%;
+  background: var(--primary, #2EA3F2);
+  bottom: 0;
+  left: 50%;
+  border-radius: 20px;
+  animation-name: AnimationLine;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes AnimationLine {
   0% {
-    opacity: 0; 
-    height: 0px ;
-    left: 50% ;  
+    opacity: 0;
+    height: 0;
+    left: 50%;
   }
   100% {
-   opacity: 1; 
-   height: 3px ; 
-   width : 120% ;
-   left: -10% ; 
+    opacity: 1;
+    height: 3px;
+    width: 100%;
+    left: 0%;
   }
- }
- .link {
-   
-   display: inline-flex ; 
-   height: var(--NavH);    
-   flex-wrap: wrap ; 
-   align-content: center ; 
-   position : relative ;
- }
+}
 
- @keyframes AnimationLine650 {
-   0%{
-     width: 120%;
-     height: 1px ; 
-   }
-   100%{
-    opacity: 1; 
-    width: 80%;
-    height: 3px ; 
-    left:0.2%; 
-   }
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .ContentHeader {
+    padding: 0 20px;
+    justify-content: space-between;
+  }
 
- }
- @media screen and (max-width: 650px){
-   .ContentHeader{
-      justify-content:space-between; 
-   }
-   .enlaces{
-      background: rgb(255, 254, 254) ;
-      flex-direction: column;
-      position: absolute;
-      top: var(--NavH);
-      right: -50%;
-      height: 100vh;
-      width:40%; 
-      transition: all 0.5s ease-in-out ;
-      gap: 12px ; 
-      padding: 0px 20px ;
-      font-size: 15px;
-   }
-   .enlaces.activado{
-      right: 0%;      
-   }
+  .button {
+    visibility: visible;
+    display: block;
+    z-index: 20;
+  }
 
-   .button{
-      visibility: visible;
-      z-index: 20;
-   }
-   .linea{
-      animation-name: AnimationLine650;
-      
-      
-   }
-   .link {
-      height:35px ;  
-   }
- }
+  .enlaces {
+    background: var(--white, #ffffff);
+    flex-direction: column;
+    position: fixed;
+    top: var(--NavH);
+    right: -100%;
+    height: calc(100vh - var(--NavH));
+    width: 260px;
+    transition: right 0.35s ease-in-out;
+    gap: 0;
+    padding: 20px 0;
+    box-shadow: -2px 0 10px rgba(26, 26, 46, 0.08);
+    align-items: stretch;
+  }
+
+  .enlaces.activado {
+    right: 0;
+  }
+
+  .enlaces a {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .link {
+    height: auto;
+    flex-wrap: nowrap;
+    align-content: initial;
+    align-items: center;
+  }
+
+  .linea {
+    animation-name: AnimationLine768;
+    bottom: 0;
+  }
+
+  @keyframes AnimationLine768 {
+    0% {
+      width: 0;
+      height: 2px;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 40px;
+      height: 2px;
+      left: 30px;
+    }
+  }
+}

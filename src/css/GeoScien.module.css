@@ -1,104 +1,197 @@
-/* Estilos minimalistas y profesionales para GeoScien */
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding: 40px 20px; */
-    /* background-color: #f8f9fa; */
-
-    /* font-family: 'Inter', sans-serif; */
-    gap: 20px;
-    padding: 30px 0;
-    margin: 0 auto;
+/* Fade-in animation */
+.fadeIn {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-/* Sección general */
-.sectionIntro, .sectionValues, .sectionTeam {
-    width: 100%;
-    /* max-width: 900px; */
-    /* text-align: center; */
-    margin-bottom: 40px;
-    /* margin: 10px  auto; */
+.fadeIn.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About Section */
+.aboutSection {
+  padding: 80px 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.aboutGrid {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.aboutImage {
+  flex: 0 0 40%;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  min-height: 300px;
+  background: var(--bg-alt, #f5f7fa);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutText {
+  flex: 1;
 }
 
 .title {
-    font-size: 1rem;
-    font-weight: 600 !important;
-    color: #2c3e50;
-    margin-bottom: 10px;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: var(--heading, #1a1a2e) !important;
+  margin-bottom: 8px !important;
+}
+
+.subtitle {
+  font-size: 1rem !important;
+  color: var(--primary, #2EA3F2) !important;
+  font-weight: 600 !important;
+  margin-bottom: 20px !important;
+}
+
+.description {
+  font-size: 0.95rem !important;
+  color: var(--body, #5a6370) !important;
+  line-height: 1.8 !important;
+}
+
+/* Section common */
+.sectionContainer {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: var(--heading, #1a1a2e) !important;
+  margin-bottom: 10px !important;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary, #2EA3F2);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.sectionSubtitle {
+  font-size: 1rem !important;
+  color: var(--body, #5a6370) !important;
+  max-width: 500px;
+  margin: 0 auto 40px !important;
+  line-height: 1.7 !important;
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 70px 20px;
+  background: var(--bg-alt, #f5f7fa);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.valueCard {
+  background: var(--white, #ffffff) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 15px rgba(26, 26, 46, 0.05) !important;
+  text-align: center;
+  transition: all 0.3s ease !important;
+  border: 1px solid var(--border, #e8ecf1) !important;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(26, 26, 46, 0.08) !important;
+}
+
+.valueContent {
+  padding: 35px 25px !important;
+}
+
+.icon {
+  font-size: 2.5rem !important;
+  color: var(--primary, #2EA3F2) !important;
+  margin-bottom: 15px !important;
+}
+
+.cardTitle {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--heading, #1a1a2e) !important;
+  margin-bottom: 10px !important;
+}
+
+.cardText {
+  font-size: 0.9rem !important;
+  color: var(--body, #5a6370) !important;
+  line-height: 1.7 !important;
+}
+
+/* Team Section */
+.teamSection {
+  padding: 70px 20px;
+}
+
+.teamCards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .aboutGrid {
+    flex-direction: column;
+    gap: 30px;
   }
-  
-  .description {
-    font-size: 1rem !important;
-    color: #7f8c8d;
-    line-height: 1.5;
+
+  .aboutImage {
+    flex: none;
+    width: 100%;
   }
-  .valueCardContainer{
-    display: flex;
-    justify-content: center;
-    padding-left: 0 !important;
+
+  .imagePlaceholder {
+    min-height: 200px;
   }
-  /* Sección de valores */
-  .sectionValues {
-    display: flex;
-    flex-direction: row;
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
     gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    max-width: 400px;
   }
-  
-  .valueCard {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 260px;
-    transition: all 0.3s ease-in-out;
+
+  .aboutSection,
+  .valuesSection,
+  .teamSection {
+    padding: 50px 15px;
   }
-  
-  .valueCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+  .title {
+    font-size: 1.5rem !important;
   }
-  
-  .icon {
-    font-size: 1.8rem;
-    color: #3498db;
-    margin-bottom: 8px;
+
+  .sectionTitle {
+    font-size: 1.5rem !important;
   }
-  
-  .cardTitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #34495e;
-    margin-bottom: 5px;
-  }
-  
-  .cardText {
-    font-size: 0.85rem;
-    color: #7f8c8d;
-    line-height: 1.4;
-  }
-  
-  /* Sección de equipo */
-  .teamCard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: fit-content;
-    margin: auto;
-  }
-  .teamCards{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 500px;
-    margin: auto;
-  }
+}

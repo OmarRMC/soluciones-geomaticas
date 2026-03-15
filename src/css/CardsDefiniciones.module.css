@@ -1,148 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-
-/*font-family: 'Poppins',sans-serif;
- background: linear-gradient(45deg, #ffaf00, #bb02ff);
-    background-attachment: fixed;
-*/
 .container {
-    position: relative;
-    
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 10px 0;
+  max-width: 1080px;
+  margin: 0 auto;
+}
 
+.card {
+  background: var(--white, #ffffff);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(26, 26, 46, 0.05);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  border: 1px solid var(--border, #e8ecf1);
+  border-top: 3px solid var(--border, #e8ecf1);
 }
-.container >  .card {
-    position: relative;
-    width: 300px;
-    height: 380px;
-    background: #fff;
-    margin: 20px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-    transition: 0.5s;
-    
-    transform: scale(0.8);
-    cursor: pointer;
-    
-}
+
 .card.visible {
-    
-    transform: translateY(-10px) scale(1);
-}
-/*
-.container:hover .card {
-    filter: blur(20px);
-    transform: scale(0.9);
-    opacity: 0.5;
-}
-*/
-
-.container .card:hover {
-    filter: blur(0px);
-    transform: scale(1.05);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.image{
-    width: 100%;
-    height: 65%;
-    object-fit: cover;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(26, 26, 46, 0.12);
+  border-top-color: var(--primary, #2EA3F2);
 }
 
-.container .card .circle {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    clip-path: circle(245px at center 0);
- 
+.imageWrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
 }
 
-
-.container .card .footer {
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-    padding-bottom: 20px;
-    font-family: 'Poppins',sans-serif;
-    font-size: 20px;
-    page-break-after: 20px;
-    text-align: center;
-  
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-
-.footer p {
-    color: #666;    
-}
-.footer>p:nth-child(1){
-    font-size: 1em;
-    font-weight: bold;
-    
-}
-.footer>p:nth-child(2){
-    font-size: 0.8em;
+.card:hover .image {
+  transform: scale(1.05);
 }
 
-.container .card:nth-child(1) .circle,
-.container .card:nth-child(1) .footer a {
-    background: #ffaf00;
+.cardBody {
+  padding: 20px;
+  text-align: center;
 }
 
-.container .card:nth-child(2) .circle,
-.container .card:nth-child(2) .footer a {
-    background: #da2268;
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--heading, #1a1a2e);
+  margin-bottom: 6px;
 }
 
-.container .card:nth-child(3) .circle,
-.container .card:nth-child(3) .footer a {
-    background: #bb02ff;
+.cardDesc {
+  font-size: 0.85rem;
+  color: var(--body, #5a6370);
+  line-height: 1.5;
 }
 
-@media screen and (max-width: 650px){
-	.container >  .card {
-        width: 200px;
-        height: 270px;
-        margin: 10px;
-    }
-    
-    .container .card .circle {
-        clip-path: circle(170px at center 0);        
-    }
-    .footer>p:nth-child(2){
-        font-size: 10px;
-        padding: 0;
-    }
-}
-@media screen and (max-width: 450px){
-	.container >  .card {
-        width: 180px;
-        height: 210px;
-        margin: 7px;
-    }
-    
-    .container .card .circle {
-        clip-path: circle(135px at center 0);        
-    }
-    .footer{
-        padding: 0;        
-    }
-    .footer>p:nth-child(1){
-    
-        font-size: 13px;
-        
-    }
-    .footer>p:nth-child(2){
-        font-size: 11px;
-    }
-    
-    .card:hover{
-        transform: scale(1);
-    }
+/* Tablet */
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px 15px;
+  }
 }
 
+/* Mobile */
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
 
-
+  .imageWrap {
+    height: 160px;
+  }
+}
