@@ -16,8 +16,8 @@ function Home() {
     return (
 
         <>
-        <GeoScien></GeoScien>
-            {/* <Slider></Slider> */}
+        {/* <GeoScien></GeoScien> */}
+            <Slider></Slider>
             {/* <div className={style.container_servicio}>
                 <h2>Servicios</h2>
                 <p>                    
