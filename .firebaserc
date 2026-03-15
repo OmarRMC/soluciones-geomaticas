@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "geo-wilmer"
-  }
+    "default": "soluciones-geomaticas",
+    "production": "soluciones-geomaticas"
+  },
+  "targets": {},
+  "etags": {}
 }

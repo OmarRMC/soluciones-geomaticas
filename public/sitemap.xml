@@ -6,32 +6,32 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://geo-wilmer.web.app/</loc>
+  <loc>https://soluciones-geomaticas.web.app/</loc>
   <lastmod>2023-07-21T17:38:35+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
-  <loc>https://geo-wilmer.web.app/Servicios/</loc>
+  <loc>https://soluciones-geomaticas.web.app/Servicios/</loc>
   <lastmod>2023-07-21T17:38:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 
 <url>
-  <loc>https://geo-wilmer.web.app/Productos/Diana/</loc>
+  <loc>https://soluciones-geomaticas.web.app/Productos/Diana/</loc>
   <lastmod>2023-07-21T17:38:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://geo-wilmer.web.app/Blog/</loc>
+  <loc>https://soluciones-geomaticas.web.app/Blog/</loc>
   <lastmod>2023-07-21T17:38:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://geo-wilmer.web.app/Cursos/</loc>
+  <loc>https://soluciones-geomaticas.web.app/Cursos/</loc>
   <lastmod>2023-07-21T17:38:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>

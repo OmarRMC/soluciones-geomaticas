@@ -17,5 +17,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_GEO_WILMER }}
-          projectId: geo-wilmer
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SOLUCIONES_GEOMATICAS }}
+          projectId: soluciones-geomaticas
