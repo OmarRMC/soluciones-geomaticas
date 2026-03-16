@@ -123,6 +123,10 @@
 }
 
 @media screen and (max-width: 650px) {
+  .container_galeria {
+    padding: 0;
+  }
+
   .mainImageWrapper {
     aspect-ratio: 4 / 3;
   }

@@ -1,4 +1,5 @@
 import style from "../../css/Geodesia.module.css"
+import galeria from "../../css/GaleriaCarousel.module.css"
 import VerifiedIcon from '@mui/icons-material/Verified';
 import geo from '../../Assets/img/services/GNSS.png';
 function Geodesia() {
@@ -29,7 +30,7 @@ function Geodesia() {
                 </div>
             </section>
 
-            <section className={style.galeria}>
+            <section className={galeria.galeria}>
                 <h3>Galeria</h3>
             </section>
 
