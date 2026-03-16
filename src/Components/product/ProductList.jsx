@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "../../css/ProductCard.module.css";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { Link } from "react-router-dom";
 
 
@@ -12,8 +10,8 @@ const ProductCard = ({ title, image, description, tags }) => {
       <div className={styles.header}>
         <h3>{title}</h3>
         <div className={styles.icons}>
-          <AttachMoneyIcon className={styles.icon} />
-          <ArrowOutwardIcon className={styles.icon} />
+          <i className="fa-solid fa-dollar-sign"></i>
+          <i className="fa-solid fa-arrow-up-right-from-square"></i>
         </div>
       </div>
       <div className={styles.content}>
@@ -27,7 +25,7 @@ const ProductCard = ({ title, image, description, tags }) => {
               ))}
             </div>
           )}
-          <Link to={`/productos/${title}`} className={styles.catalogButton}>Catalogo &gt;</Link>
+          <Link to={`/productos/catalogo/${title}`} className={styles.catalogButton}>Catalogo <i className="fa-solid fa-book-open"></i></Link>
         </div>
       </div>
     </div>
