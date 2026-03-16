@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 import bannerStyle from '../css/ContanerServicio.module.css';
 
 function Blog() {
@@ -9,6 +10,15 @@ function Blog() {
 
   return (
     <>
+      <Helmet>
+        <title>Blog | Soluciones Geomaticas</title>
+        <meta name="description" content="Articulos, guias y novedades sobre topografia, geodesia, fotogrametria con drones y sistemas de informacion geografica. Blog de Soluciones Geomaticas, Bolivia." />
+        <link rel="canonical" href="https://soluciones-geomaticas.web.app/blog" />
+        <meta property="og:title" content="Blog | Soluciones Geomaticas" />
+        <meta property="og:description" content="Articulos y novedades sobre topografia, geodesia, fotogrametria y SIG en Bolivia." />
+        <meta property="og:url" content="https://soluciones-geomaticas.web.app/blog" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className={bannerStyle.banner}>
         <h1 className={bannerStyle.bannerTitle}>Blog</h1>
         <p className={bannerStyle.breadcrumb}>inicio / blog</p>

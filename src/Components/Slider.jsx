@@ -34,21 +34,19 @@ function Slider() {
         }
     }, []);
 
+    const dirRef = { current: 1 };
     useEffect(() => {
-        let i = 1;
-        let c = index;
+        const total = list.length;
         const interval = setInterval(() => {
-            if (c < 5 && c >= 1) {
-                c++;
-                setImgeActive((e) => e + i);
-            } else {
-                i = -i;
-                c = 1;
-            }
+            setImgeActive((prev) => {
+                if (prev >= total) dirRef.current = -1;
+                if (prev <= 1) dirRef.current = 1;
+                return prev + dirRef.current;
+            });
         }, 7000);
 
         return () => clearInterval(interval);
-    }, [index]);
+    }, []);
 
     return (
         <div className="slider">

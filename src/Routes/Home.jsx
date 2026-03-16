@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 import CardsDefiniciones from "../Components/CardsDefiniciones";
 import Slider from "../Components/Slider";
 import GeoScien from "../Components/GeoScien";
@@ -13,6 +14,33 @@ function Home() {
 
     return (
         <>
+            <Helmet>
+                <title>Soluciones Geomaticas | Topografia, Geodesia, Fotogrametria y SIG en Bolivia</title>
+                <meta name="description" content="Empresa especializada en topografia, geodesia, fotogrametria con drones y sistemas de informacion geografica (SIG). Levantamientos topograficos, cartografia y georreferenciacion en Bolivia." />
+                <link rel="canonical" href="https://soluciones-geomaticas.web.app/" />
+                <meta property="og:title" content="Soluciones Geomaticas | Topografia, Geodesia, Fotogrametria y SIG" />
+                <meta property="og:description" content="Empresa especializada en topografia, geodesia, fotogrametria con drones y SIG. Servicios profesionales en Bolivia." />
+                <meta property="og:url" content="https://soluciones-geomaticas.web.app/" />
+                <meta property="og:type" content="website" />
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "ProfessionalService",
+                    "name": "Soluciones Geomaticas",
+                    "description": "Empresa especializada en topografia, geodesia, fotogrametria con drones y sistemas de informacion geografica en Bolivia.",
+                    "url": "https://soluciones-geomaticas.web.app",
+                    "telephone": "+59163385750",
+                    "email": "lacienciageomatica@gmail.com",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Calle Mercado Esq. Loayza, Edif. Paladium Of. J",
+                        "addressLocality": "La Paz",
+                        "addressCountry": "BO"
+                    },
+                    "areaServed": "Bolivia",
+                    "serviceType": ["Topografia", "Geodesia", "Fotogrametria", "Sistemas de Informacion Geografica"]
+                })}</script>
+            </Helmet>
+
             {/* Hero Slider */}
             <Slider />
 

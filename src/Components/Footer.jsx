@@ -77,7 +77,7 @@ function Footer() {
             </footer>
 
             <div className={style.bottomBar}>
-                <span><CopyrightIcon style={{ fontSize: '13px', verticalAlign: 'middle' }} /> 2025 Soluciones Geomaticas</span>
+                <span><CopyrightIcon style={{ fontSize: '13px', verticalAlign: 'middle' }} /> 2026 Soluciones Geomaticas</span>
                 <span>Todos los derechos reservados</span>
             </div>
         </div>

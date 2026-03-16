@@ -89,7 +89,7 @@ const GeoScien = () => {
             Equipo de profesionales especializados en diversas areas de la Geomatica.
           </Typography>
           <div className={styles.teamCards}>
-            <CardAuthorV1 name="Juan Wilmer" role="CEO y Fundador" image={avatar} socials={{ }} />
+            <CardAuthorV1 name="Juan Mamani C." role="CEO y Fundador" image={avatar} socials={{ }} />
             <CardAuthorV1 name="Juan Wilmer" role="Topografo y geomatico" image={avatar} socials={{ }} />
           </div>
         </div>
