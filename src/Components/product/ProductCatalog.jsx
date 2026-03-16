@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { products } from "../../utils/products";
 import styles from '../../css/ProductCatalog.module.css'
+import stylesBoxBack from '../../css/BoxBack.module.css';
 import BoxBack from "../BoxBack";
 
 const ProductCatalog = () => {
     const { title } = useParams();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [title]);
     const product = products.find((p) => p.title === title);
     if (!product) return <h2 className={styles.errorMessage}>Producto no encontrado</h2>;
 
@@ -13,7 +19,9 @@ const ProductCatalog = () => {
 
     return (
         <>
+        <div className={stylesBoxBack.containerBoxBack}>
             <BoxBack></BoxBack>
+        </div>
             <div className={styles.tableContainer}>
                 <h2 className={styles.tableTitle}>Lista de Productos - {product.title}</h2>
                 <div className={styles.tableWrapper}>
