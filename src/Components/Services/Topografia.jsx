@@ -1,6 +1,25 @@
 import style from "../../css/Geodesia.module.css"
+import galeria from "../../css/GaleriaCarousel.module.css"
 import VerifiedIcon from '@mui/icons-material/Verified';
 import geo from '../../Assets/img/services/ESTA.jpg';
+import GaleriaCarousel from '../GaleriaCarousel';
+
+import img1 from '../../Assets/servicios/topografia/uno.jpg';
+import img2 from '../../Assets/servicios/topografia/dos.jpg';
+import img3 from '../../Assets/servicios/topografia/tres.jpg';
+import img4 from '../../Assets/servicios/topografia/cuatro.jpg';
+import img5 from '../../Assets/servicios/topografia/cinco.jpg';
+import img6 from '../../Assets/servicios/topografia/saeis.jpg';
+
+const galeriaImages = [
+    { src: img1, alt: "Topografia - Trabajo de campo 1" },
+    { src: img2, alt: "Topografia - Trabajo de campo 2" },
+    { src: img3, alt: "Topografia - Trabajo de campo 3" },
+    { src: img4, alt: "Topografia - Trabajo de campo 4" },
+    { src: img5, alt: "Topografia - Trabajo de campo 5" },
+    { src: img6, alt: "Topografia - Trabajo de campo 6" },
+];
+
 function Topografia() {
     return (
         <div className={style.container_servicio}>
@@ -31,8 +50,11 @@ function Topografia() {
                 </div>
             </section>
 
-            <section className={style.galeria}>
+            <section className={galeria.galeria}>
                 <h3>Galeria</h3>
+                <div className={galeria.container_galeria}>
+                    <GaleriaCarousel images={galeriaImages} />
+                </div>
             </section>
 
             <section className={style.ctaService}>

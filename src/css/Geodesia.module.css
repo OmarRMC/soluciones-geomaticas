@@ -70,12 +70,6 @@
   border-radius: 8px;
 }
 
-.galeria h3 {
-  font-size: 1.2rem;
-  color: var(--heading, #1a1a2e);
-  margin-top: 30px;
-}
-
 /* CTA Service */
 .ctaService {
   background: var(--bg-alt, #f5f7fa);

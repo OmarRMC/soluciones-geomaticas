@@ -3,11 +3,12 @@
     align-items: center;
     color: var(--primary, #2EA3F2);
     font-weight: bold;
-    margin: 12px 12px;
     cursor: pointer;
     transition: color 0.3s ease;
 }
-
+.boxVolver svg {
+    color: var(--primary);
+}
 .boxVolver:hover {
     color: var(--primary-dark, #1a7bc4);
 }

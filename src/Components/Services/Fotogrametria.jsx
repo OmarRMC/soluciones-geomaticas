@@ -1,6 +1,17 @@
 import style from "../../css/Geodesia.module.css"
+import galeria from "../../css/GaleriaCarousel.module.css"
 import VerifiedIcon from '@mui/icons-material/Verified';
 import geo from '../../Assets/img/services/mavic.jpg';
+import GaleriaCarousel from '../GaleriaCarousel';
+
+import img1 from '../../Assets/servicios/fotogrametria/uno.jpg';
+import img2 from '../../Assets/servicios/fotogrametria/dos.jpg';
+
+const galeriaImages = [
+    { src: img1, alt: "Fotogrametria - Mapeo aéreo 1" },
+    { src: img2, alt: "Fotogrametria - Mapeo aéreo 2" },
+];
+
 function Fotogrametria() {
     return (
         <div className={style.container_servicio}>
@@ -31,8 +42,11 @@ function Fotogrametria() {
                 </div>
             </section>
 
-            <section className={style.galeria}>
+            <section className={galeria.galeria}>
                 <h3>Galeria</h3>
+                <div className={galeria.container_galeria}>
+                    <GaleriaCarousel images={galeriaImages} />
+                </div>
             </section>
 
             <section className={style.ctaService}>
