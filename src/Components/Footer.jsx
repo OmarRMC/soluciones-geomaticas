@@ -9,7 +9,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import CallIcon from '@mui/icons-material/Call';
 import style from '../css/Footer.module.css';
-import logo from '../Assets/img/LOGO.png';
+import ScienBoLogo from '../Assets/ScienBoLogo';
 import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom';
 
@@ -24,7 +24,7 @@ function Footer() {
             <footer className={style.container}>
                 <div className={style.column}>
                     <div className={style.logo}>
-                        <img src={logo} alt="Soluciones Geomaticas" />
+                        <ScienBoLogo width={50} color="var(--primary)" />
                         <span className={style.brandName}>Soluciones Geomaticas</span>
                     </div>
                     <p className={style.brandDesc}>

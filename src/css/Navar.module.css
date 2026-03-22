@@ -24,9 +24,11 @@
   height: 100%;
 }
 
-.ContentLogo > img {
+.ContentLogo > img,
+.ContentLogo > svg {
   width: 45px;
   height: auto;
+  flex-shrink: 0;
 }
 
 .brand {

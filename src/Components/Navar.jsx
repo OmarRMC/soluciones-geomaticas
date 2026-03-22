@@ -2,7 +2,7 @@ import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import style from '../css/Navar.module.css';
-import logo from '../Assets/img/LOGO.png'
+import ScienBoLogo from '../Assets/ScienBoLogo';
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
@@ -39,7 +39,7 @@ function Navar() {
   return (
     <header className={`${style.ContentHeader} ${scrolled ? style.scrolled : ''}`}>
       <div className={style.ContentLogo}>
-        <img src={logo} alt="Soluciones Geomaticas" />
+        <ScienBoLogo width={45} color="var(--primary)" />
         <div>
           <Link to="/" className={style.brand}>Soluciones Geomaticas</Link>
         </div>
