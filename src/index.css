@@ -3,16 +3,20 @@
 :root {
   --NavH: 80px;
   --fuente: 'Open Sans', Arial, sans-serif;
-  --ColorPrimario: #2EA3F2;
-  --primary: #2EA3F2;
-  --primary-dark: #1a7bc4;
+  --ColorPrimario: #F18A1F;
+  --primary: #F18A1F;
+  --primary-dark: #C56B0E;
+  --primary-light: #FFC07A;
+  --primary-soft: #FFF3E6;
+  --accent: #1F3A5F;
+  --accent-light: #4A6B8C;
   --dark: #1a1a2e;
   --dark-secondary: #16162a;
   --heading: #1a1a2e;
   --body: #5a6370;
   --muted: #8a94a0;
-  --border: #e8ecf1;
-  --bg-alt: #f5f7fa;
+  --border: #EDE8E1;
+  --bg-alt: #FAF7F2;
   --white: #ffffff;
 }
 

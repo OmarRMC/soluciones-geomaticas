@@ -10,6 +10,7 @@ import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import CallIcon from '@mui/icons-material/Call';
 import style from '../css/Footer.module.css';
 import ScienBoLogo from '../Assets/ScienBoLogo';
+import BrandText from './BrandText';
 import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +26,7 @@ function Footer() {
                 <div className={style.column}>
                     <div className={style.logo}>
                         <ScienBoLogo width={50} color="var(--primary)" />
-                        <span className={style.brandName}>Soluciones Geomaticas</span>
+                        <BrandText size="large" variant="light" circle={true} textSolucionesGeo={true} />
                     </div>
                     <p className={style.brandDesc}>
                         Soluciones integrales en Geomatica con tecnologia avanzada y un equipo de expertos.

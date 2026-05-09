@@ -46,7 +46,7 @@
     display: inline-flex;
     align-items: center;
     padding: 8px 12px;
-    background: var(--primary, #2EA3F2);
+    background: var(--primary, #F18A1F);
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -56,7 +56,7 @@
 }
 
 .backButton:hover {
-    background: var(--primary-dark, #1a7bc4);
+    background: var(--primary-dark, #C56B0E);
 }
 
 .errorMessage {

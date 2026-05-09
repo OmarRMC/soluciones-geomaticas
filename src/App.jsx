@@ -11,6 +11,7 @@ import Productos from './Routes/Productos';
 import ProductCatalog from './Components/product/ProductCatalog'
 import DetalleCurso from './Routes/DetalleCurso';
 import BlogView from './Routes/BlogView';
+import BlogArticle from './Routes/BlogArticle';
 import WhatsAppFloat from './Components/WhatsAppFloat';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/cursos/:id" element={<DetalleCurso />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogArticle />} />
         <Route path="/servicio/:service_id" element={<BlogView />} />
         <Route path="/productos/catalogo/:title" element={<ProductCatalog />} />
         <Route path="/productos/:producto_id" element={<Productos />} />

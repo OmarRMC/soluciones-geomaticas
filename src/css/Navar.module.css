@@ -41,7 +41,7 @@
 }
 
 .brand:hover {
-  color: var(--primary, #2EA3F2);
+  color: var(--primary, #F18A1F);
 }
 
 .button {
@@ -64,7 +64,7 @@
 }
 
 .enlaces a:hover {
-  color: var(--primary, #2EA3F2);
+  color: var(--primary, #F18A1F);
 }
 
 .link {
@@ -79,7 +79,7 @@
   position: absolute;
   height: 0;
   width: 0%;
-  background: var(--primary, #2EA3F2);
+  background: var(--primary, #F18A1F);
   bottom: 0;
   left: 50%;
   border-radius: 20px;

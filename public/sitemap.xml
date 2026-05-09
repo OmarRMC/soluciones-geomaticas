@@ -56,9 +56,16 @@
 
 <url>
   <loc>https://soluciones-geomaticas.web.app/blog</loc>
-  <lastmod>2026-03-15</lastmod>
+  <lastmod>2026-05-09</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://soluciones-geomaticas.web.app/blog/levantamiento-topografico-drones-precision-fotogrametrica</loc>
+  <lastmod>2026-05-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 
 <url>

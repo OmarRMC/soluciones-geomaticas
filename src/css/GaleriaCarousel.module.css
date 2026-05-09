@@ -112,7 +112,7 @@
 }
 
 .thumbActive {
-  border-color: var(--primary, #2EA3F2);
+  border-color: var(--primary, #F18A1F);
   opacity: 1;
 }
 

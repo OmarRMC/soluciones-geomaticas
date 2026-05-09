@@ -3,6 +3,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import style from '../css/Navar.module.css';
 import ScienBoLogo from '../Assets/ScienBoLogo';
+import BrandText from './BrandText';
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
@@ -40,9 +41,9 @@ function Navar() {
     <header className={`${style.ContentHeader} ${scrolled ? style.scrolled : ''}`}>
       <div className={style.ContentLogo}>
         <ScienBoLogo width={45} color="var(--primary)" />
-        <div>
-          <Link to="/" className={style.brand}>Soluciones Geomaticas</Link>
-        </div>
+        <Link to="/" className={style.brand}>
+          <BrandText size="small" variant="dark" />
+        </Link>
       </div>
       <div className={style.button}>
         <IconButton onClick={() => setBarra(!barra)}>

@@ -43,7 +43,7 @@
 }
 
 .actividades ul li svg {
-  color: var(--primary, #2EA3F2);
+  color: var(--primary, #F18A1F);
   font-size: 20px;
   flex-shrink: 0;
 }
@@ -123,18 +123,18 @@
   align-items: center;
   gap: 8px;
   background: transparent;
-  color: var(--primary, #2EA3F2);
+  color: var(--primary, #F18A1F);
   padding: 12px 28px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  border: 2px solid var(--primary, #2EA3F2);
+  border: 2px solid var(--primary, #F18A1F);
   transition: all 0.3s ease;
 }
 
 .ctaBtnOutline:hover {
-  background: var(--primary, #2EA3F2);
+  background: var(--primary, #F18A1F);
   color: #fff;
   transform: translateY(-2px);
 }

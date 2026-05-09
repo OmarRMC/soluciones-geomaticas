@@ -57,7 +57,7 @@
   display: block;
   width: 30px;
   height: 2px;
-  background: var(--primary, #2EA3F2);
+  background: var(--primary, #F18A1F);
   margin-top: 8px;
   border-radius: 2px;
 }
@@ -81,7 +81,7 @@
 }
 
 .linkList a:hover {
-  color: var(--primary, #2EA3F2);
+  color: var(--primary, #F18A1F);
 }
 
 /* Contact list */
@@ -102,7 +102,7 @@
 }
 
 .contactList li svg {
-  color: var(--primary, #2EA3F2);
+  color: var(--primary, #F18A1F);
   font-size: 18px;
   flex-shrink: 0;
   margin-top: 2px;
@@ -126,7 +126,7 @@
 }
 
 .socialBtn:hover svg {
-  color: var(--primary, #2EA3F2);
+  color: var(--primary, #F18A1F);
   transform: scale(1.15);
 }
 

@@ -89,7 +89,7 @@
 
 .catalogButton {
     display: inline-block;
-    background: var(--primary, #2EA3F2);
+    background: var(--primary, #F18A1F);
     color: white;
     border: none;
     padding: 8px 20px;
@@ -102,5 +102,5 @@
 }
 
 .catalogButton:hover {
-    background: var(--primary-dark, #1a7bc4);
+    background: var(--primary-dark, #C56B0E);
 }

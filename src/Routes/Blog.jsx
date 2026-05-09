@@ -1,55 +1,64 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import bannerStyle from '../css/ContanerServicio.module.css';
+import style from '../css/Blog.module.css';
+import Search from '../Components/Search';
+import BlogGrid from '../Components/blog/BlogGrid';
+import BlogFilters from '../Components/blog/BlogFilters';
+import { filterArticles, getCategoriesInUse } from '../utils/blog';
 
 function Blog() {
+  const [category, setCategory] = useState(null);
+  const [query, setQuery] = useState('');
+
   useEffect(() => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }, []);
 
+  const categories = useMemo(() => getCategoriesInUse(), []);
+  const articles = useMemo(
+    () => filterArticles({ category, query }),
+    [category, query]
+  );
+
   return (
     <>
       <Helmet>
-        <title>Blog | Soluciones Geomaticas</title>
-        <meta name="description" content="Articulos, guias y novedades sobre topografia, geodesia, fotogrametria con drones y sistemas de informacion geografica. Blog de Soluciones Geomaticas, Bolivia." />
+        <title>Blog | Soluciones Geom&aacute;ticas</title>
+        <meta
+          name="description"
+          content="Art&iacute;culos, gu&iacute;as y novedades sobre topograf&iacute;a, geodesia, fotogrametr&iacute;a con drones y sistemas de informaci&oacute;n geogr&aacute;fica. Blog de Soluciones Geom&aacute;ticas, Bolivia."
+        />
+        <meta
+          name="keywords"
+          content="blog topograf&iacute;a, blog geodesia, fotogrametr&iacute;a drones, SIG Bolivia, art&iacute;culos geom&aacute;tica"
+        />
         <link rel="canonical" href="https://soluciones-geomaticas.web.app/blog" />
-        <meta property="og:title" content="Blog | Soluciones Geomaticas" />
-        <meta property="og:description" content="Articulos y novedades sobre topografia, geodesia, fotogrametria y SIG en Bolivia." />
+        <meta property="og:title" content="Blog | Soluciones Geom&aacute;ticas" />
+        <meta
+          property="og:description"
+          content="Art&iacute;culos y novedades sobre topograf&iacute;a, geodesia, fotogrametr&iacute;a y SIG en Bolivia."
+        />
         <meta property="og:url" content="https://soluciones-geomaticas.web.app/blog" />
         <meta property="og:type" content="website" />
       </Helmet>
+
       <div className={bannerStyle.banner}>
         <h1 className={bannerStyle.bannerTitle}>Blog</h1>
         <p className={bannerStyle.breadcrumb}>inicio / blog</p>
       </div>
 
-      <div style={{
-        textAlign: 'center',
-        padding: '80px 20px',
-        maxWidth: '600px',
-        margin: '0 auto',
-      }}>
-        <i className="fa-solid fa-newspaper" style={{
-          fontSize: '3.5rem',
-          color: 'var(--primary, #2EA3F2)',
-          marginBottom: '20px',
-          display: 'block',
-        }}></i>
-        <h2 style={{
-          fontSize: '1.5rem',
-          fontWeight: 700,
-          color: 'var(--heading, #1a1a2e)',
-          marginBottom: '12px',
-        }}>Blog en Construccion</h2>
-        <p style={{
-          fontSize: '1rem',
-          color: 'var(--body, #5a6370)',
-          lineHeight: 1.7,
-        }}>
-          Estamos preparando contenido de calidad sobre topografia, geodesia, fotogrametria y SIG. Pronto encontraras articulos, guias y novedades del sector.
-        </p>
+      <div className={style.toolbar}>
+        <Search search={setQuery} />
+        <BlogFilters
+          categories={categories}
+          active={category}
+          onChange={setCategory}
+        />
       </div>
+
+      <BlogGrid articles={articles} />
     </>
   );
 }

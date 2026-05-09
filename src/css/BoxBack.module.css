@@ -4,7 +4,7 @@
 .boxVolver {
     display: flex;
     align-items: center;
-    color: var(--primary, #2EA3F2);
+    color: var(--primary, #F18A1F);
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -13,5 +13,5 @@
     color: var(--primary);
 }
 .boxVolver:hover {
-    color: var(--primary-dark, #1a7bc4);
+    color: var(--primary-dark, #C56B0E);
 }

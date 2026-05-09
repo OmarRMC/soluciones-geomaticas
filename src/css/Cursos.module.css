@@ -24,7 +24,7 @@
 .contentMainCurso:hover {
   top: -6px;
   box-shadow: 0 12px 30px rgba(26, 26, 46, 0.12);
-  border-top: 3px solid var(--primary, #2EA3F2);
+  border-top: 3px solid var(--primary, #F18A1F);
 }
 
 .contentCurso {

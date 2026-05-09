@@ -77,7 +77,7 @@
 .cursoPrecio {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #2EA3F2;
+    color: #F18A1F;
     margin: 4px 0 0;
 }
 .cursoCertificado {
@@ -195,12 +195,12 @@
     padding: 12px;
     background: #fafafa;
     border-radius: 8px;
-    border-left: 3px solid #2EA3F2;
+    border-left: 3px solid #F18A1F;
 }
 .moduloNumero {
     min-width: 32px;
     height: 32px;
-    background: #2EA3F2;
+    background: #F18A1F;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -235,7 +235,7 @@
 
 /* --- Recursos (existente, mejorado) --- */
 .boxRecurso {
-    background: var(--primary, #2EA3F2);
+    background: var(--primary, #F18A1F);
     border-radius: 8px;
     padding: 12px 15px;
     color: white;
@@ -260,7 +260,7 @@
     background: #f9f9f9;
     border-radius: 8px;
     padding: 14px 16px;
-    border-left: 3px solid #2EA3F2;
+    border-left: 3px solid #F18A1F;
 }
 .contactoCard p {
     font-size: 0.9rem;

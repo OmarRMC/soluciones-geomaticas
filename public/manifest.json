@@ -3,24 +3,19 @@
   "name": "Soluciones Geomaticas - Topografia, Geodesia, Fotogrametria y SIG",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "montana.png",
+      "src": "logo-scienbov1.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "montana.png",
+      "src": "logo-scienbov1.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#2EA3F2",
+  "theme_color": "#F18A1F",
   "background_color": "#ffffff",
   "description": "Servicios profesionales de topografia, geodesia, fotogrametria con drones y sistemas de informacion geografica en Bolivia.",
   "lang": "es",

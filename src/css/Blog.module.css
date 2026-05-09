@@ -1,0 +1,91 @@
+.toolbar {
+  max-width: 1080px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.chip {
+  border: 1px solid var(--border, #EDE8E1);
+  background: var(--white, #ffffff);
+  color: var(--body, #5a6370);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chip:hover {
+  border-color: var(--primary, #F18A1F);
+  color: var(--primary, #F18A1F);
+}
+
+.chipActive {
+  background: var(--primary, #F18A1F);
+  border-color: var(--primary, #F18A1F);
+  color: var(--white, #ffffff);
+}
+
+.chipActive:hover {
+  background: var(--primary-dark, #C56B0E);
+  color: var(--white, #ffffff);
+}
+
+.grid {
+  padding: 30px 20px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.empty {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.emptyIcon {
+  font-size: 3.5rem;
+  color: var(--primary, #F18A1F);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.emptyTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading, #1a1a2e);
+  margin-bottom: 12px;
+}
+
+.emptyText {
+  font-size: 1rem;
+  color: var(--body, #5a6370);
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 650px) {
+  .grid {
+    padding: 25px 15px 40px;
+    gap: 20px;
+  }
+
+  .chip {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

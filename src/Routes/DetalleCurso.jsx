@@ -107,7 +107,7 @@ import Loading from '../Components/Loading';
         Titulo: "Material digital del curso",
         Enlace: "https://drive.google.com/ejemplo-material-curso",
         Nota: "Presentaciones y guías del módulo teórico",
-        CardColor: "#2EA3F2",
+        CardColor: "#F18A1F",
         textColor: "#ffffff"
       },
       {
@@ -352,7 +352,7 @@ export default function DetalleCurso() {
                             enlaceCorto = enlaceCorto.replace("https://", "").replace("http://", "");
                             enlaceCorto = enlaceCorto.length > 30 ? (enlaceCorto.substring(0, 28) + "...") : enlaceCorto;
                             return (
-                                <div className={style.boxRecurso} style={{ background: recurso.CardColor ?? "#2EA3F2", color: recurso.textColor ?? "white" }} key={recurso.recurso_id || recurso._key}>
+                                <div className={style.boxRecurso} style={{ background: recurso.CardColor ?? "#F18A1F", color: recurso.textColor ?? "white" }} key={recurso.recurso_id || recurso._key}>
                                     <p>{recurso.Titulo}</p>
                                     {recurso.Enlace && <a href={recurso.Enlace} className={style.enlaceRecurso} target="_blank" rel="noopener noreferrer">{enlaceCorto}</a>}
                                     {recurso.Nota && <p>{recurso.Nota}</p>}

@@ -29,7 +29,7 @@ const GeoScien = () => {
         <div className={styles.aboutGrid}>
           <div className={styles.aboutImage}>
             <div className={styles.imagePlaceholder}>
-              <Public style={{ fontSize: '80px', color: '#2EA3F2' }} />
+              <Public style={{ fontSize: '80px', color: 'var(--primary)' }} />
             </div>
           </div>
           <div className={styles.aboutText}>
@@ -89,7 +89,7 @@ const GeoScien = () => {
             Equipo de profesionales especializados en diversas areas de la Geomatica.
           </Typography>
           <div className={styles.teamCards}>
-            <CardAuthorV1 name="Juan Mamani C." role="CEO y Fundador de ScienBo" image={avatar} socials={{ }} />
+            <CardAuthorV1 name="Juan Mamani Capcha" role="CEO y Fundador de ScienBo" image={avatar} socials={{ }} />
             <CardAuthorV1 name="Rodrigo Apaza" role="Topografo y geomatico" image={avatar} socials={{ }} />
           </div>
         </div>

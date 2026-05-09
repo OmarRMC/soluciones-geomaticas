@@ -107,7 +107,7 @@ function Curso({ imgUrl, titulo = "Developers JS", autor = "Omar RMC", leciones 
                 <main className={style.descricionCurso}>
                     <p>{titulo}</p>
                     <p>{autor}</p>
-                    {categoria && <span style={{ fontSize: '0.75rem', color: '#2EA3F2' }}>{categoria}</span>}
+                    {categoria && <span style={{ fontSize: '0.75rem', color: 'var(--primary)' }}>{categoria}</span>}
                 </main>
 
                 <footer className={style.footerCurso}>
