@@ -14,7 +14,9 @@
     <meta name="audience" content="all"/>
     <meta name="robots" content="index, follow"/>
     <meta name="category" content="Levantamientos topogr&aacute;ficos, Fotogrametr&iacute;a con drones, Sistemas de informaci&oacute;n geogr&aacute;fica, Geodesia"/>
-    <link rel="canonical" href="https://soluciones-geomaticas.web.app/" />
+    <!-- La etiqueta canónica NO se declara aquí: este index.html se sirve para todas las rutas (SPA),
+         así que fijarla a la raíz haría que todas las páginas se declaren canónicas hacia "/".
+         Cada ruta define su propia canónica vía react-helmet-async (ver src/Routes/*). -->
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website"/>
