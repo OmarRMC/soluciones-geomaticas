@@ -50,7 +50,10 @@ const server = http.createServer(async (req, res) => {
 });
 await new Promise((r) => server.listen(PORT, r));
 
-const browser = await puppeteer.launch();
+// En GitHub Actions (Ubuntu 24.04) Chrome no puede usar su sandbox; solo abre este sitio local
+const browser = await puppeteer.launch({
+  args: process.env.CI ? ['--no-sandbox', '--disable-setuid-sandbox'] : [],
+});
 const page = await browser.newPage();
 await page.setViewport({ width: 1366, height: 900 });
 
