@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { absUrl, breadcrumbLd } from '../utils/seo';
 import bannerStyle from '../css/ContanerServicio.module.css';
 import style from '../css/Blog.module.css';
 import Search from '../Components/Search';
@@ -25,23 +26,28 @@ function Blog() {
   return (
     <>
       <Helmet>
-        <title>Blog | Soluciones Geom&aacute;ticas</title>
+        <title>Blog | Soluciones Geomáticas</title>
         <meta
           name="description"
-          content="Art&iacute;culos, gu&iacute;as y novedades sobre topograf&iacute;a, geodesia, fotogrametr&iacute;a con drones y sistemas de informaci&oacute;n geogr&aacute;fica. Blog de Soluciones Geom&aacute;ticas, Bolivia."
+          content="Artículos, guías y novedades sobre topografía, geodesia, fotogrametría con drones y sistemas de información geográfica. Blog de Soluciones Geomáticas, Bolivia."
         />
         <meta
           name="keywords"
-          content="blog topograf&iacute;a, blog geodesia, fotogrametr&iacute;a drones, SIG Bolivia, art&iacute;culos geom&aacute;tica"
+          content="blog topografía, blog geodesia, fotogrametría drones, SIG Bolivia, artículos geomática"
         />
         <link rel="canonical" href="https://soluciones-geomaticas.web.app/blog" />
-        <meta property="og:title" content="Blog | Soluciones Geom&aacute;ticas" />
+        <meta property="og:title" content="Blog | Soluciones Geomáticas" />
         <meta
           property="og:description"
-          content="Art&iacute;culos y novedades sobre topograf&iacute;a, geodesia, fotogrametr&iacute;a y SIG en Bolivia."
+          content="Artículos y novedades sobre topografía, geodesia, fotogrametría y SIG en Bolivia."
         />
         <meta property="og:url" content="https://soluciones-geomaticas.web.app/blog" />
         <meta property="og:type" content="website" />
+          <meta property="og:image" content={absUrl('/blog/drones-precision/cover.jpg')} />
+          <meta name="twitter:image" content={absUrl('/blog/drones-precision/cover.jpg')} />
+          <script type="application/ld+json">
+              {JSON.stringify(breadcrumbLd([{ name: 'Blog', path: '/blog' }]))}
+          </script>
       </Helmet>
 
       <div className={bannerStyle.banner}>

@@ -6,7 +6,7 @@ function WhatsAppFloat() {
     const [mensaje, setMensaje] = useState('');
 
     const enviar = () => {
-        const texto = mensaje.trim() || 'Hola, quiero mas informacion';
+        const texto = mensaje.trim() || 'Hola, quiero más información';
         const url = `https://api.whatsapp.com/send?phone=+59163385750&text=${encodeURIComponent(`✔ Soluciones Geomaticas\n${texto}`)}`;
         window.open(url, '_blank');
         setMensaje('');
@@ -21,7 +21,7 @@ function WhatsAppFloat() {
                         <div className={style.headerInfo}>
                             <i className="fa-brands fa-whatsapp"></i>
                             <div>
-                                <span className={style.headerTitle}>Soluciones Geomaticas</span>
+                                <span className={style.headerTitle}>Soluciones Geomáticas</span>
                                 <span className={style.headerStatus}>En linea</span>
                             </div>
                         </div>

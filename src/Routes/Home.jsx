@@ -15,30 +15,13 @@ function Home() {
     return (
         <>
             <Helmet>
-                <title>Soluciones Geomaticas | Topografia, Geodesia, Fotogrametria y SIG en Bolivia</title>
-                <meta name="description" content="Empresa especializada en topografia, geodesia, fotogrametria con drones y sistemas de informacion geografica (SIG). Levantamientos topograficos, cartografia y georreferenciacion en Bolivia." />
+                <title>Soluciones Geomáticas | Topografía, Geodesia, Fotogrametría y SIG en Bolivia</title>
+                <meta name="description" content="Empresa especializada en topografía, geodesia, fotogrametría con drones y sistemas de información geográfica (SIG). Levantamientos topográficos, cartografía y georreferenciación en Bolivia." />
                 <link rel="canonical" href="https://soluciones-geomaticas.web.app/" />
-                <meta property="og:title" content="Soluciones Geomaticas | Topografia, Geodesia, Fotogrametria y SIG" />
-                <meta property="og:description" content="Empresa especializada en topografia, geodesia, fotogrametria con drones y SIG. Servicios profesionales en Bolivia." />
+                <meta property="og:title" content="Soluciones Geomáticas | Topografía, Geodesia, Fotogrametría y SIG" />
+                <meta property="og:description" content="Empresa especializada en topografía, geodesia, fotogrametría con drones y SIG. Servicios profesionales en Bolivia." />
                 <meta property="og:url" content="https://soluciones-geomaticas.web.app/" />
                 <meta property="og:type" content="website" />
-                <script type="application/ld+json">{JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "ProfessionalService",
-                    "name": "Soluciones Geomaticas",
-                    "description": "Empresa especializada en topografia, geodesia, fotogrametria con drones y sistemas de informacion geografica en Bolivia.",
-                    "url": "https://soluciones-geomaticas.web.app",
-                    "telephone": "+59163385750",
-                    "email": "lacienciageomatica@gmail.com",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "streetAddress": "Calle Mercado Esq. Loayza, Edif. Paladium Of. J",
-                        "addressLocality": "La Paz",
-                        "addressCountry": "BO"
-                    },
-                    "areaServed": "Bolivia",
-                    "serviceType": ["Topografia", "Geodesia", "Fotogrametria", "Sistemas de Informacion Geografica"]
-                })}</script>
             </Helmet>
 
             {/* Hero Slider */}
@@ -55,7 +38,7 @@ function Home() {
                 <div className={style.sectionHeader}>
                     <h2 className={style.sectionTitle}>Nuestros Servicios</h2>
                     <p className={style.sectionSubtitle}>
-                        Ofrecemos servicios especializados en Topografia y Geomatica, brindando soluciones precisas para proyectos de ingenieria, construccion y medio ambiente.
+                        Ofrecemos servicios especializados en Topografía y Geomática, brindando soluciones precisas para proyectos de ingeniería, construcción y medio ambiente.
                     </p>
                 </div>
                 <CardsDefiniciones />
@@ -71,7 +54,7 @@ function Home() {
                         </span>
                         <h2 className={style.ctaTitle}>¿Tienes un proyecto en mente?</h2>
                         <p className={style.ctaText}>
-                            Nuestro equipo esta listo para ayudarte. Desde levantamientos topograficos hasta analisis SIG, ofrecemos soluciones a medida para cada necesidad.
+                            Nuestro equipo está listo para ayudarte. Desde levantamientos topográficos hasta análisis SIG, ofrecemos soluciones a medida para cada necesidad.
                         </p>
                         <div className={style.ctaInfo}>
                             <div className={style.ctaInfoItem}>
@@ -97,7 +80,7 @@ function Home() {
                                 <i className="fa-brands fa-whatsapp"></i> Escribenos
                             </a>
                             <a
-                                href="mailto:lacienciageomatica@gmail.com?subject=Consulta - Soluciones Geomaticas"
+                                href="mailto:lacienciageomatica@gmail.com?subject=Consulta - Soluciones Geomáticas"
                                 className={style.ctaBtnOutline}
                             >
                                 <i className="fa-regular fa-envelope"></i> Email
@@ -109,7 +92,7 @@ function Home() {
                     <div className={style.ctaRight}>
                         <div className={style.mapWrapper}>
                             <iframe
-                                title="Ubicacion Soluciones Geomaticas"
+                                title="Ubicación Soluciones Geomáticas"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.2804044498678!2d-68.13780939570313!3d-16.49551600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf0d2b4a18f1%3A0x57648bb8e89132b8!2sCalle%20Mercado%20Esq.%20Loayza%2C%20Edif.%20Paladium%2C%20La%20Paz!5e0!3m2!1ses!2sbo!4v1710000000000"
                                 width="100%"
                                 height="100%"

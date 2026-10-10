@@ -2,6 +2,8 @@ import style from '../css/Cursos.module.css'
 import Zoom from '@mui/material/Zoom';
 import Search from '../Components/Search'
 import { Helmet } from 'react-helmet-async';
+import { absUrl, breadcrumbLd } from '../utils/seo';
+import ogImage from '../Assets/img/curso1.jpg';
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import servidor from './Server.js';
@@ -38,8 +40,13 @@ function Cursos() {
         document.documentElement.scrollTop = 0;
 
         let connection = async () => {
-            const res = await fetch(`${servidor}/allCursos`);
-            const data = await res.json();
+            let data = [];
+            try {
+                const res = await fetch(`${servidor}/allCursos`);
+                if (res.ok) data = await res.json();
+            } catch {
+                // sin conexión con la API: se muestra el mensaje de "sin cursos"
+            }
 
             setListCursos(data);
             setDataBase(data);
@@ -54,23 +61,33 @@ function Cursos() {
     return (
         <>
             <Helmet>
-                <title>Cursos y Capacitaciones | Soluciones Geom&aacute;ticas</title>
-                <meta name="description" content={`Explora nuestros ${totalCursos || ''} cursos de topograf&iacute;a, geodesia, fotogrametr&iacute;a, SIG y desarrollo web. Capacitaciones profesionales con certificaci&oacute;n en geom&aacute;tica.`} />
-                <meta name="keywords" content={`cursos topograf&iacute;a, capacitaci&oacute;n geodesia, curso fotogrametr&iacute;a drones, curso SIG, geom&aacute;tica Bolivia${categoriasDisponibles.length ? ', ' + categoriasDisponibles.join(', ') : ''}`} />
+                <title>Cursos y Capacitaciones | Soluciones Geomáticas</title>
+                <meta name="description" content={`Explora nuestros ${totalCursos || ''} cursos de topografía, geodesia, fotogrametría, SIG y desarrollo web. Capacitaciones profesionales con certificación en geomática.`} />
+                <meta name="keywords" content={`cursos topografía, capacitación geodesia, curso fotogrametría drones, curso SIG, geomática Bolivia${categoriasDisponibles.length ? ', ' + categoriasDisponibles.join(', ') : ''}`} />
                 <link rel="canonical" href="https://soluciones-geomaticas.web.app/cursos" />
-                <meta property="og:title" content="Cursos y Capacitaciones | Soluciones Geom&aacute;ticas" />
-                <meta property="og:description" content={`Descubre nuestros cursos de topograf&iacute;a, geodesia, fotogrametr&iacute;a y SIG. ${totalCursos ? totalCursos + ' cursos disponibles.' : ''}`} />
+                <meta property="og:title" content="Cursos y Capacitaciones | Soluciones Geomáticas" />
+                <meta property="og:description" content={`Descubre nuestros cursos de topografía, geodesia, fotogrametría y SIG. ${totalCursos ? totalCursos + ' cursos disponibles.' : ''}`} />
                 <meta property="og:url" content="https://soluciones-geomaticas.web.app/cursos" />
                 <meta property="og:type" content="website" />
+                <meta property="og:image" content={absUrl(ogImage)} />
+                <meta name="twitter:image" content={absUrl(ogImage)} />
+                <script type="application/ld+json">
+                    {JSON.stringify(breadcrumbLd([{ name: 'Cursos', path: '/cursos' }]))}
+                </script>
             </Helmet>
             <div className={bannerStyle.banner}>
-                <h1 className={bannerStyle.bannerTitle}>Cursos y Capacitaci&oacute;n</h1>
+                <h1 className={bannerStyle.bannerTitle}>Cursos y Capacitación</h1>
                 <p className={bannerStyle.breadcrumb}>inicio / cursos</p>
             </div>
             <Search search={filtrar} />
             <main className={style.main}>
 
                 {(!listCursos) ? <Loading></Loading> : ''}
+                {listCursos?.length === 0 && dataBase.length === 0 && (
+                    <p style={{ textAlign: 'center', width: '100%' }}>
+                        Pronto publicaremos nuevos cursos. Escríbenos por WhatsApp para conocer las próximas capacitaciones.
+                    </p>
+                )}
                 {
                     listCursos?.map((element, pos) =>
                         <Zoom key={`${element.id}${pos}}`} in={checked} style={{ transitionDelay: checked ? `${500 * pos}ms` : '0ms' }}>
@@ -101,7 +118,7 @@ function Curso({ imgUrl, titulo = "Developers JS", autor = "Omar RMC", leciones 
         <article className={style.contentMainCurso} onClick={() => navigate(`./${curso_id}?titulo=${encodeURIComponent(titulo)}&descripccion=${encodeURIComponent(Descripccion ?? '')}`)}>
             <div className={style.contentCurso}>
                 <div className={style.imgCurso}>
-                    <img loading='lazy' src={imgUrl} alt={`Curso de ${titulo} - Soluciones Geomaticas`} width="100%" />
+                    <img loading='lazy' src={imgUrl} alt={`Curso de ${titulo} - Soluciones Geomáticas`} width="100%" />
                 </div>
 
                 <main className={style.descricionCurso}>

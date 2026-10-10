@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 import { products } from "../../utils/products"
-const ProductCard = ({ title, image, description, tags }) => {
+const ProductCard = ({ title, slug, image, description, tags }) => {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
@@ -25,7 +25,7 @@ const ProductCard = ({ title, image, description, tags }) => {
               ))}
             </div>
           )}
-          <Link to={`/productos/catalogo/${title}`} className={styles.catalogButton}>Catalogo <i className="fa-solid fa-book-open"></i></Link>
+          <Link to={`/productos/catalogo/${slug}`} className={styles.catalogButton}>Catálogo <i className="fa-solid fa-book-open"></i></Link>
         </div>
       </div>
     </div>

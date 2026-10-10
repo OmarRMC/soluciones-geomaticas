@@ -12,12 +12,12 @@ import img5 from '../../Assets/servicios/topografia/cinco.jpg';
 import img6 from '../../Assets/servicios/topografia/saeis.jpg';
 
 const galeriaImages = [
-    { src: img1, alt: "Topografia - Trabajo de campo 1" },
-    { src: img2, alt: "Topografia - Trabajo de campo 2" },
-    { src: img3, alt: "Topografia - Trabajo de campo 3" },
-    { src: img4, alt: "Topografia - Trabajo de campo 4" },
-    { src: img5, alt: "Topografia - Trabajo de campo 5" },
-    { src: img6, alt: "Topografia - Trabajo de campo 6" },
+    { src: img1, alt: "Topografía - Trabajo de campo 1" },
+    { src: img2, alt: "Topografía - Trabajo de campo 2" },
+    { src: img3, alt: "Topografía - Trabajo de campo 3" },
+    { src: img4, alt: "Topografía - Trabajo de campo 4" },
+    { src: img5, alt: "Topografía - Trabajo de campo 5" },
+    { src: img6, alt: "Topografía - Trabajo de campo 6" },
 ];
 
 function Topografia() {
@@ -64,7 +64,7 @@ function Topografia() {
                     <a href="https://api.whatsapp.com/send?phone=+59163385750&text=%E2%9C%94%20Soluciones%20Geomaticas%20-%20Consulta%20Topografia" target="_blank" rel="noopener noreferrer" className={style.ctaBtnPrimary}>
                         <i className="fa-brands fa-whatsapp"></i> WhatsApp
                     </a>
-                    <a href="mailto:lacienciageomatica@gmail.com?subject=Consulta Topografia - Soluciones Geomaticas" className={style.ctaBtnOutline}>
+                    <a href="mailto:lacienciageomatica@gmail.com?subject=Consulta Topografía - Soluciones Geomáticas" className={style.ctaBtnOutline}>
                         <i className="fa-regular fa-envelope"></i> Email
                     </a>
                 </div>

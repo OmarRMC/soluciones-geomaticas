@@ -9,10 +9,10 @@ import { useEffect } from 'react';
 
 function CardsDefiniciones() {
     const ListDB = [
-        { titulo: "Fotogrametria", slug: "fotogrametria", description: 'Levantamientos con Dron', urlImg: fotogrametria },
-        { titulo: "Topografia", slug: "topografia", description: 'Relevamiento de terrenos', urlImg: topografia },
+        { titulo: "Fotogrametría", slug: "fotogrametria", description: 'Levantamientos con Dron', urlImg: fotogrametria },
+        { titulo: "Topografía", slug: "topografia", description: 'Relevamiento de terrenos', urlImg: topografia },
         { titulo: "Geodesia", slug: "geodesia", description: 'Posicionamiento GNSS', urlImg: geodesia },
-        { titulo: "SIG", slug: "sig", description: 'Analisis y Despliegue', urlImg: sig }
+        { titulo: "SIG", slug: "sig", description: 'Análisis y Despliegue', urlImg: sig }
     ];
 
     const [observer, setElemntos, entries] = UseObserver({ root: null, threshold: 0.3 });

@@ -16,10 +16,10 @@ function Slider() {
 
     let list = [1, 2, 3, 4];
     let textos = [
-        { titulo: "Topografia", descripcion: "Descripcion y representacion grafica del terreno, tanto los elementos naturales como artificiales, aplicando diferentes metodos y utilizando equipos como la Estacion Total, Receptores GNSS, Drone." },
-        { titulo: "Geodesia", descripcion: "Ofrecemos soluciones especializadas en establecimiento de redes geodesicas, levantamientos GNSS y desarrollo de modelos geoidales locales, asegurando precision y eficiencia en cada proyecto." },
-        { titulo: "Fotogrametria - Dron", descripcion: "Realizamos levantamientos topograficos precisos utilizando drones georreferenciados y generamos productos fotogrametricos de alta calidad para una amplia variedad de aplicaciones." },
-        { titulo: "S I G", descripcion: "Ofrecemos servicios especializados en el analisis de datos hidrologicos y la elaboracion de mapas utilizando avanzadas herramientas de sistemas de informacion geografica (SIG)." }
+        { titulo: "Topografía", descripcion: "Descripción y representación gráfica del terreno, tanto los elementos naturales como artificiales, aplicando diferentes métodos y utilizando equipos como la Estación Total, Receptores GNSS, Drone." },
+        { titulo: "Geodesia", descripcion: "Ofrecemos soluciones especializadas en establecimiento de redes geodésicas, levantamientos GNSS y desarrollo de modelos geoidales locales, asegurando precisión y eficiencia en cada proyecto." },
+        { titulo: "Fotogrametría - Dron", descripcion: "Realizamos levantamientos topográficos precisos utilizando drones georreferenciados y generamos productos fotogramétricos de alta calidad para una amplia variedad de aplicaciones." },
+        { titulo: "S I G", descripcion: "Ofrecemos servicios especializados en el análisis de datos hidrológicos y la elaboración de mapas utilizando avanzadas herramientas de sistemas de información geográfica (SIG)." }
     ];
 
     function start() {
@@ -55,13 +55,13 @@ function Slider() {
                     <div key={`${pos}-${pos}`} className={`myslide ${pos + 1 === imgActive ? "active" : ""}`}>
                         <div className="slide-overlay"></div>
                         <div className={`txt ${pos + 1 === imgActive ? "active" : ""}`}>
-                            <h1>{textos[pos].titulo}</h1>
+                            <h2>{textos[pos].titulo}</h2>
                             <p className="descripcion">{textos[pos].descripcion.substring(0, 200)}{textos[pos].descripcion.length > 200 && "..."}</p>
                             <button className="slider-cta" onClick={() => navigation('/servicios')}>
                                 Conoce nuestros servicios
                             </button>
                         </div>
-                        <img loading="lazy" className={`img ${pos + 1 === imgActive ? "active" : ""}`} src={size > 650 ? ListImg(`./slide${pos + 1}PC.jpeg`) : ListImg(`./slide${pos + 1}Mobile.jpeg`)} alt={textos[pos].titulo} />
+                        <img loading={pos === 0 ? "eager" : "lazy"} fetchPriority={pos === 0 ? "high" : "auto"} className={`img ${pos + 1 === imgActive ? "active" : ""}`} src={size > 650 ? ListImg(`./slide${pos + 1}PC.jpeg`) : ListImg(`./slide${pos + 1}Mobile.jpeg`)} alt={textos[pos].titulo} />
                     </div>
                 ))}
             </div>

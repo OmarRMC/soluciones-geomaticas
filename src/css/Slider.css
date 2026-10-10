@@ -161,9 +161,10 @@
   }
 }
 
-.txt > h1 {
+.txt > h2 {
   color: #ffffff;
   font-size: 1.4em;
+  margin-top: 0.67em;
   margin-bottom: 10px;
   font-weight: 800;
   letter-spacing: -0.3px;
@@ -252,7 +253,7 @@
     border-left-width: 3px;
   }
 
-  .txt > h1 {
+  .txt > h2 {
     font-size: 1.1em;
   }
 

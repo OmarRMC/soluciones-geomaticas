@@ -18,7 +18,7 @@ function BrandText({ size = 'small', variant = 'dark', className, circle = false
         {circle && <span className={style.circle} aria-hidden="true" />}
         <span className={style.title}>ScienBo</span>
       </div>
-      {textSolucionesGeo && <span className={style.tagline}>Soluciones Geomaticas</span>}
+      {textSolucionesGeo && <span className={style.tagline}>Soluciones Geomáticas</span>}
     </div>
   );
 }

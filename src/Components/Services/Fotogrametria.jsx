@@ -8,8 +8,8 @@ import img1 from '../../Assets/servicios/fotogrametria/uno.jpg';
 import img2 from '../../Assets/servicios/fotogrametria/dos.jpg';
 
 const galeriaImages = [
-    { src: img1, alt: "Fotogrametria - Mapeo aéreo 1" },
-    { src: img2, alt: "Fotogrametria - Mapeo aéreo 2" },
+    { src: img1, alt: "Fotogrametría - Mapeo aéreo 1" },
+    { src: img2, alt: "Fotogrametría - Mapeo aéreo 2" },
 ];
 
 function Fotogrametria() {
@@ -56,7 +56,7 @@ function Fotogrametria() {
                     <a href="https://api.whatsapp.com/send?phone=+59163385750&text=%E2%9C%94%20Soluciones%20Geomaticas%20-%20Consulta%20Fotogrametria" target="_blank" rel="noopener noreferrer" className={style.ctaBtnPrimary}>
                         <i className="fa-brands fa-whatsapp"></i> WhatsApp
                     </a>
-                    <a href="mailto:lacienciageomatica@gmail.com?subject=Consulta Fotogrametria - Soluciones Geomaticas" className={style.ctaBtnOutline}>
+                    <a href="mailto:lacienciageomatica@gmail.com?subject=Consulta Fotogrametría - Soluciones Geomáticas" className={style.ctaBtnOutline}>
                         <i className="fa-regular fa-envelope"></i> Email
                     </a>
                 </div>

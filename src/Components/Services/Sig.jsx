@@ -44,7 +44,7 @@ function Sig() {
                     <a href="https://api.whatsapp.com/send?phone=+59163385750&text=%E2%9C%94%20Soluciones%20Geomaticas%20-%20Consulta%20SIG" target="_blank" rel="noopener noreferrer" className={style.ctaBtnPrimary}>
                         <i className="fa-brands fa-whatsapp"></i> WhatsApp
                     </a>
-                    <a href="mailto:lacienciageomatica@gmail.com?subject=Consulta SIG - Soluciones Geomaticas" className={style.ctaBtnOutline}>
+                    <a href="mailto:lacienciageomatica@gmail.com?subject=Consulta SIG - Soluciones Geomáticas" className={style.ctaBtnOutline}>
                         <i className="fa-regular fa-envelope"></i> Email
                     </a>
                 </div>

@@ -29,15 +29,15 @@ function Footer() {
                         <BrandText size="large" variant="light" circle={true} textSolucionesGeo={true} />
                     </div>
                     <p className={style.brandDesc}>
-                        Soluciones integrales en Geomatica con tecnologia avanzada y un equipo de expertos.
+                        Soluciones integrales en Geomática con tecnología avanzada y un equipo de expertos.
                     </p>
                 </div>
 
                 <div className={style.column}>
                     <h4 className={style.columnTitle}>Servicios</h4>
                     <ul className={style.linkList}>
-                        <li><Link to="/servicio/fotogrametria">Fotogrametria</Link></li>
-                        <li><Link to="/servicio/topografia">Topografia</Link></li>
+                        <li><Link to="/servicio/fotogrametria">Fotogrametría</Link></li>
+                        <li><Link to="/servicio/topografia">Topografía</Link></li>
                         <li><Link to="/servicio/geodesia">Geodesia</Link></li>
                         <li><Link to="/servicio/sig">SIG</Link></li>
                     </ul>
@@ -53,7 +53,7 @@ function Footer() {
                 </div>
 
                 <div className={style.column}>
-                    <h4 className={style.columnTitle}>Siguenos</h4>
+                    <h4 className={style.columnTitle}>Síguenos</h4>
                     <div className={style.socialGrid}>
                         <IconButton onClick={() => NewTab("https://www.facebook.com/profile.php?id=100065148214212")} className={style.socialBtn}>
                             <FacebookOutlinedIcon />
@@ -70,7 +70,7 @@ function Footer() {
                         <IconButton onClick={() => NewTab("https://api.whatsapp.com/send?phone=+59163385750&text=%E2%9C%94%20%F0%9F%97%BA%20%F0%9F%8C%8F%20Soluciones%20Geomaticas%20-%20Consulta")} className={style.socialBtn}>
                             <WhatsAppIcon />
                         </IconButton>
-                        <IconButton onClick={() => NewTab("mailto:lacienciageomatica@gmail.com?subject=Soluciones Geomaticas&body=Hola")} className={style.socialBtn}>
+                        <IconButton onClick={() => NewTab("mailto:lacienciageomatica@gmail.com?subject=Soluciones Geomáticas&body=Hola")} className={style.socialBtn}>
                             <MarkEmailUnreadRoundedIcon />
                         </IconButton>
                     </div>
@@ -78,7 +78,7 @@ function Footer() {
             </footer>
 
             <div className={style.bottomBar}>
-                <span><CopyrightIcon style={{ fontSize: '13px', verticalAlign: 'middle' }} /> 2026 Soluciones Geomaticas</span>
+                <span><CopyrightIcon style={{ fontSize: '13px', verticalAlign: 'middle' }} /> 2026 Soluciones Geomáticas</span>
                 <span>Todos los derechos reservados</span>
             </div>
         </div>

@@ -6,7 +6,7 @@ function NotFound({ title = 'Página no encontrada', message = 'La página que b
   return (
     <>
       <Helmet>
-        <title>{title} | Soluciones Geom&aacute;ticas</title>
+        <title>{title} | Soluciones Geomáticas</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className={style.notFound}>

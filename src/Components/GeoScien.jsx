@@ -33,14 +33,14 @@ const GeoScien = () => {
             </div>
           </div>
           <div className={styles.aboutText}>
-            <Typography variant="h2" className={styles.title}>
-              Soluciones Geomaticas
+            <Typography variant="h2" component="h1" className={styles.title}>
+              Soluciones Geomáticas
             </Typography>
             <Typography className={styles.subtitle}>
               Expertos en servicios geoespaciales
             </Typography>
             <Typography className={styles.description}>
-              Nuestro objetivo es brindar un servicio integral en el ambito de la Geomatica. Contamos con un equipo de profesionales altamente especializados en diversas areas del conocimiento y respaldados por herramientas tecnologicas de ultima generacion. Gracias a nuestro enfoque multidisciplinario y el uso de tecnologia avanzada, garantizamos soluciones precisas y eficientes para tus necesidades geoespaciales.
+              Nuestro objetivo es brindar un servicio integral en el ámbito de la Geomática. Contamos con un equipo de profesionales altamente especializados en diversas áreas del conocimiento y respaldados por herramientas tecnológicas de última generación. Gracias a nuestro enfoque multidisciplinario y el uso de tecnología avanzada, garantizamos soluciones precisas y eficientes para tus necesidades geoespaciales.
             </Typography>
           </div>
         </div>
@@ -55,16 +55,16 @@ const GeoScien = () => {
                 <Public className={styles.icon} />
                 <Typography variant="h6" className={styles.cardTitle}>Somos</Typography>
                 <Typography className={styles.cardText}>
-                  Somos un equipo de profesionales con amplia experiencia en Geomatica, Topografia, Cartografia y Geomensura. Nuestro compromiso con la excelencia se refleja en cada proyecto.
+                  Somos un equipo de profesionales con amplia experiencia en Geomática, Topografía, Cartografía y Geomensura. Nuestro compromiso con la excelencia se refleja en cada proyecto.
                 </Typography>
               </CardContent>
             </Card>
             <Card className={styles.valueCard}>
               <CardContent className={styles.valueContent}>
                 <RocketLaunch className={styles.icon} />
-                <Typography variant="h6" className={styles.cardTitle}>Pasion</Typography>
+                <Typography variant="h6" className={styles.cardTitle}>Pasión</Typography>
                 <Typography className={styles.cardText}>
-                  Nos comprometemos con las geociencias, la tecnologia y la excelencia en el servicio, proporcionando soluciones tecnicas precisas e innovadoras.
+                  Nos comprometemos con las geociencias, la tecnología y la excelencia en el servicio, proporcionando soluciones técnicas precisas e innovadoras.
                 </Typography>
               </CardContent>
             </Card>
@@ -86,7 +86,7 @@ const GeoScien = () => {
         <div className={styles.sectionContainer}>
           <Typography variant="h2" className={styles.sectionTitle}>Nuestro Equipo</Typography>
           <Typography className={styles.sectionSubtitle}>
-            Equipo de profesionales especializados en diversas areas de la Geomatica.
+            Equipo de profesionales especializados en diversas áreas de la Geomática.
           </Typography>
           <div className={styles.teamCards}>
             <CardAuthorV1 name="Juan Mamani Capcha" role="CEO y Fundador de ScienBo" image={avatar} socials={{ }} />

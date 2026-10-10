@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { absUrl, breadcrumbLd } from "../../utils/seo";
 import { products } from "../../utils/products";
 import styles from '../../css/ProductCatalog.module.css'
 import stylesBoxBack from '../../css/BoxBack.module.css';
@@ -13,32 +14,40 @@ const ProductCatalog = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [title]);
-    const product = products.find((p) => p.title === title);
+
+    const product = products.find((p) => p.slug === title || p.title === title);
     if (!product) {
         return <NotFound title="Producto no encontrado" message="El producto que buscas no existe." backTo="/productos" backLabel="Ver productos" />;
     }
 
+    if (product.slug !== title) return <Navigate to={`/productos/catalogo/${product.slug}`} replace />;
+
     const catalog = product.catalog;
-    const url = `https://soluciones-geomaticas.web.app/productos/catalogo/${encodeURIComponent(product.title)}`;
-    const description = `Lista de productos y precios de ${product.title} en Soluciones Geomaticas, Bolivia.`;
+    const url = `https://soluciones-geomaticas.web.app/productos/catalogo/${product.slug}`;
+    const description = `Lista de productos y precios de ${product.title} en Soluciones Geomáticas, Bolivia.`;
 
 
     return (
         <>
         <Helmet>
-            <title>{`${product.title} - Catalogo | Soluciones Geomaticas`}</title>
+            <title>{`${product.title} - Catálogo | Soluciones Geomáticas`}</title>
             <meta name="description" content={description} />
             <link rel="canonical" href={url} />
-            <meta property="og:title" content={`${product.title} - Catalogo | Soluciones Geomaticas`} />
+            <meta property="og:title" content={`${product.title} - Catálogo | Soluciones Geomáticas`} />
             <meta property="og:description" content={description} />
             <meta property="og:url" content={url} />
             <meta property="og:type" content="website" />
+            <meta property="og:image" content={absUrl(product.image)} />
+            <meta name="twitter:image" content={absUrl(product.image)} />
+            <script type="application/ld+json">
+                {JSON.stringify(breadcrumbLd([{ name: 'Productos', path: '/productos' }, { name: product.title, path: `/productos/catalogo/${product.slug}` }]))}
+            </script>
         </Helmet>
         <div className={stylesBoxBack.containerBoxBack}>
             <BoxBack></BoxBack>
         </div>
             <div className={styles.tableContainer}>
-                <h2 className={styles.tableTitle}>Lista de Productos - {product.title}</h2>
+                <h1 className={styles.tableTitle}>Lista de Productos - {product.title}</h1>
                 <div className={styles.tableWrapper}>
                     <table className={styles.productTable}>
                         <thead>

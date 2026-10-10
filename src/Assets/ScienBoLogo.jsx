@@ -11,7 +11,7 @@ function ScienBoLogo({ className, style, width, height, alt }) {
   return (
     <img
       src={logoUrl}
-      alt={alt ?? 'ScienBo - Soluciones Geomaticas'}
+      alt={alt ?? 'ScienBo - Soluciones Geomáticas'}
       width={width}
       height={height}
       className={className}

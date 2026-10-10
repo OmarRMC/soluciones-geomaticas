@@ -25,9 +25,9 @@ import Loading from '../Components/Loading';
     Descripccion: "Formar pilotos de drones responsables y competentes, capaces de operar de manera segura, cumpliendo la normativa vigente en Bolivia y aplicando el dron en actividades comerciales, técnicas y audiovisuales.",
     Imagen: "https://soluciones-geomaticas.web.app/img/curso-pilotaje-drones.jpg",
     Categoria: "Drones",                                // Categoria del curso
-    Nivel: "Basico",                                     // Basico | Intermedio | Avanzado
+    Nivel: "Básico",                                     // Básico | Intermedio | Avanzado
     Duracion: "12",                                      // Horas totales (8 teóricas + 4 prácticas)
-    Lecciones: 12,                                       // Numero de lecciones
+    Lecciones: 12,                                       // Número de lecciones
     FechaInicio: "2026-05-10",                            // Fecha de inicio (opcional)
     Modalidad: "Hibrido",                                // Virtual | Presencial | Hibrido
     Precio: 390,                                         // Precio en Bs
@@ -184,11 +184,11 @@ export default function DetalleCurso() {
     return (
         <>
             <Helmet>
-                <title>{titulo ? `${titulo} | Cursos` : 'Detalle del Curso'} - Soluciones Geomaticas</title>
-                <meta name="description" content={descripcion || `Curso de ${titulo} - Accede a los recursos y materiales del curso. Soluciones Geomaticas.`} />
-                <meta name="keywords" content={`curso ${titulo}, capacitacion ${titulo}, ${curso?.Categoria || 'geomatica'}, Soluciones Geomaticas`} />
+                <title>{titulo ? `${titulo} | Cursos` : 'Detalle del Curso'} - Soluciones Geomáticas</title>
+                <meta name="description" content={descripcion || `Curso de ${titulo} - Accede a los recursos y materiales del curso. Soluciones Geomáticas.`} />
+                <meta name="keywords" content={`curso ${titulo}, capacitación ${titulo}, ${curso?.Categoria || 'geomática'}, Soluciones Geomáticas`} />
                 <link rel="canonical" href={`https://soluciones-geomaticas.web.app/cursos/${id}`} />
-                <meta property="og:title" content={`${titulo || 'Curso'} | Soluciones Geomaticas`} />
+                <meta property="og:title" content={`${titulo || 'Curso'} | Soluciones Geomáticas`} />
                 <meta property="og:description" content={descripcion || `Recursos y materiales del curso de ${titulo}`} />
                 <meta property="og:url" content={`https://soluciones-geomaticas.web.app/cursos/${id}`} />
                 <meta property="og:type" content="article" />

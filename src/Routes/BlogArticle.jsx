@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { breadcrumbLd } from '../utils/seo';
 import { Link, useParams } from 'react-router-dom';
 import ArticleHeader from '../Components/blog/ArticleHeader';
 import ArticleTOC from '../Components/blog/ArticleTOC';
@@ -22,12 +23,12 @@ function BlogArticle() {
     return (
       <>
         <Helmet>
-          <title>Art&iacute;culo no encontrado | Soluciones Geom&aacute;ticas</title>
+          <title>Artículo no encontrado | Soluciones Geomáticas</title>
           <meta name="robots" content="noindex" />
         </Helmet>
         <div className={style.notFound}>
-          <h2>Art&iacute;culo no encontrado</h2>
-          <p>El art&iacute;culo que buscas no existe o fue movido.</p>
+          <h2>Artículo no encontrado</h2>
+          <p>El artículo que buscas no existe o fue movido.</p>
           <Link to="/blog" className={style.notFoundBtn}>
             Volver al blog
           </Link>
@@ -38,7 +39,7 @@ function BlogArticle() {
 
   const { Component, title, excerpt, cover, ogImage, author, date, tags = [] } = article;
   const url = `https://soluciones-geomaticas.web.app/blog/${article.slug}`;
-  const ogImageUrl = `https://soluciones-geomaticas.web.app${ogImage || cover || '/LogoTexto.png'}`;
+  const ogImageUrl = `https://soluciones-geomaticas.web.app${ogImage || cover || '/montana.png'}`;
   const related = getRelated(article.slug, 3);
 
   const jsonLd = {
@@ -57,7 +58,7 @@ function BlogArticle() {
       name: 'Soluciones Geomáticas',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://soluciones-geomaticas.web.app/LogoTexto.png',
+        url: 'https://soluciones-geomaticas.web.app/logo-amarilo.png',
       },
     },
     mainEntityOfPage: {
@@ -69,7 +70,7 @@ function BlogArticle() {
   return (
     <>
       <Helmet>
-        <title>{title} | Soluciones Geom&aacute;ticas</title>
+        <title>{title} | Soluciones Geomáticas</title>
         <meta name="description" content={excerpt} />
         <meta name="keywords" content={tags.join(', ')} />
         <link rel="canonical" href={url} />
@@ -91,6 +92,9 @@ function BlogArticle() {
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
         </script>
+          <script type="application/ld+json">
+              {JSON.stringify(breadcrumbLd([{ name: 'Blog', path: '/blog' }, { name: title, path: `/blog/${article.slug}` }]))}
+          </script>
       </Helmet>
 
       <ArticleHeader article={article} />

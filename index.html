@@ -8,7 +8,6 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Soluciones Geom&aacute;ticas - Empresa especializada en topograf&iacute;a, geodesia, fotogrametr&iacute;a con drones y sistemas de informaci&oacute;n geogr&aacute;fica (SIG). Levantamientos topogr&aacute;ficos, cartograf&iacute;a y georreferenciaci&oacute;n en Bolivia."/>
-    <meta name="keywords" content="topograf&iacute;a, geodesia, geom&aacute;tica, fotogrametr&iacute;a, SIG, sistemas de informaci&oacute;n geogr&aacute;fica, soluciones geom&aacute;ticas, levantamiento topogr&aacute;fico, drones, cartograf&iacute;a, georreferenciaci&oacute;n, Bolivia, DJI, ortofoto, modelo digital de terreno"/>
     <meta name="copyright" content="Soluciones Geom&aacute;ticas"/>
     <meta name="author" content="Soluciones Geom&aacute;ticas"/>
     <meta name="audience" content="all"/>
@@ -47,50 +46,61 @@
     </style>
     <title>Soluciones Geom&aacute;ticas | Topograf&iacute;a, Geodesia, Fotogrametr&iacute;a y SIG en Bolivia</title>
 
-    <!-- Schema.org JSON-LD - Organización -->
+    <!-- Schema.org JSON-LD: organización (una sola vez para todo el sitio; las páginas la referencian por @id) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Organization", "LocalBusiness"],
-      "name": "Soluciones Geomáticas",
-      "alternateName": "ScienBo",
-      "url": "https://soluciones-geomaticas.web.app/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://soluciones-geomaticas.web.app/logo-amarilo.png",
-        "width": 400,
-        "height": 500
-      },
-      "image": "https://soluciones-geomaticas.web.app/montana.png",
-      "description": "Empresa especializada en topografía, geodesia, fotogrametría con drones y sistemas de información geográfica (SIG) en Bolivia.",
-      "telephone": "+59163385750",
-      "email": "lacienciageomatica@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Calle Mercado Esq. Loayza, Edif. Paladium",
-        "addressLocality": "La Paz",
-        "addressCountry": "BO"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "addressCountry": "BO",
-        "addressRegion": "La Paz"
-      },
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=100065148214212",
-        "https://www.instagram.com/cienciasgeomaticas66",
-        "https://www.youtube.com/channel/UCRGioCQaGbKCK0h5ZcMEBFw"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios Geomáticos",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Topografía" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Geodesia" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fotogrametría con drones" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistemas de Información Geográfica (SIG)" } }
-        ]
-      }
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://soluciones-geomaticas.web.app/#organization",
+          "name": "Soluciones Geomáticas",
+          "alternateName": "ScienBo",
+          "url": "https://soluciones-geomaticas.web.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://soluciones-geomaticas.web.app/logo-amarilo.png",
+            "width": 400,
+            "height": 500
+          },
+          "image": "https://soluciones-geomaticas.web.app/montana.png",
+          "description": "Empresa especializada en topografía, geodesia, fotogrametría con drones y sistemas de información geográfica (SIG) en Bolivia.",
+          "telephone": "+59163385750",
+          "email": "lacienciageomatica@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle Mercado Esq. Loayza, Edif. Paladium Of. J",
+            "addressLocality": "La Paz",
+            "addressRegion": "La Paz",
+            "addressCountry": "BO"
+          },
+          "areaServed": { "@type": "Country", "name": "Bolivia" },
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=100065148214212",
+            "https://www.instagram.com/cienciasgeomaticas66",
+            "https://www.youtube.com/channel/UCRGioCQaGbKCK0h5ZcMEBFw"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios Geomáticos",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Topografía", "url": "https://soluciones-geomaticas.web.app/servicio/topografia" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Geodesia", "url": "https://soluciones-geomaticas.web.app/servicio/geodesia" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fotogrametría con drones", "url": "https://soluciones-geomaticas.web.app/servicio/fotogrametria" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistemas de Información Geográfica (SIG)", "url": "https://soluciones-geomaticas.web.app/servicio/sig" } }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://soluciones-geomaticas.web.app/#website",
+          "name": "Soluciones Geomáticas",
+          "alternateName": "ScienBo",
+          "url": "https://soluciones-geomaticas.web.app/",
+          "inLanguage": "es-BO",
+          "publisher": { "@id": "https://soluciones-geomaticas.web.app/#organization" }
+        }
+      ]
     }
     </script>
   </head>

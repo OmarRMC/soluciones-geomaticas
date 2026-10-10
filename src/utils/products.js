@@ -4,6 +4,7 @@ import imgLandingPad from "../Assets/img/productos/landingPad.webp";
 const products = [
     {
         title: "Drones DJI",
+        slug: "drones-dji",
         image: imgDrone,
         description: "Venta de drones",
         // tags: ["Mavic 2 Pro", "Phantom 4 Pro", "Mavic 3 Enterprise"],
@@ -15,6 +16,7 @@ const products = [
     },
     {
         title: "Dianas",
+        slug: "dianas",
         image: imgDiana,
         description: "Para que tú Mapeo sea Georreferenciado, tenemos diferentes tamaños de Dianas.",
         catalog: [
@@ -24,6 +26,7 @@ const products = [
     },
     {
         title: "Landing Pad",
+        slug: "landing-pad",
         image: imgLandingPad,
         description: "Pista de aterrizaje de drones",
         catalog: [

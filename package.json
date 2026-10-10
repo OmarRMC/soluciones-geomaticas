@@ -6,6 +6,10 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fortawesome/fontawesome-free": "^7.2.0",
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-brands-svg-icons": "^7.2.0",
+    "@fortawesome/free-regular-svg-icons": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.3",
     "@mui/styled-engine-sc": "^5.11.0",
@@ -24,7 +28,8 @@
     "dev": "vite",
     "build": "vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
-    "blog:covers": "node scripts/generate-blog-covers.mjs"
+    "blog:covers": "node scripts/generate-blog-covers.mjs",
+    "images:optimize": "node scripts/optimize-images.mjs"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.4",

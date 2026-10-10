@@ -1,78 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/</loc>
-  <lastmod>2026-03-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>1.00</priority>
-</url>
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/servicios</loc>
-  <lastmod>2026-03-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.90</priority>
-</url>
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/servicio/fotogrametria</loc>
-  <lastmod>2026-03-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/servicio/topografia</loc>
-  <lastmod>2026-03-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/servicio/geodesia</loc>
-  <lastmod>2026-03-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/servicio/sig</loc>
-  <lastmod>2026-03-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/productos</loc>
-  <lastmod>2026-03-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/blog</loc>
-  <lastmod>2026-05-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/blog/levantamiento-topografico-drones-precision-fotogrametrica</loc>
-  <lastmod>2026-05-09</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-
-<url>
-  <loc>https://soluciones-geomaticas.web.app/cursos</loc>
-  <lastmod>2026-03-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/servicios</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/servicio/fotogrametria</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/servicio/topografia</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/servicio/geodesia</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/servicio/sig</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/productos</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/productos/catalogo/drones-dji</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/productos/catalogo/dianas</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/productos/catalogo/landing-pad</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/blog</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/blog/levantamiento-topografico-drones-precision-fotogrametrica</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://soluciones-geomaticas.web.app/cursos</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
 </urlset>

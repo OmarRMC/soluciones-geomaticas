@@ -78,7 +78,7 @@ for (const route of routes) {
       return html.replaceAll(`http://localhost:${location.port}`, origin);
     }, ORIGIN);
 
-    const file = route === '/' ? 'index.html' : route.slice(1) + '.html';
+    const file = route === '/' ? 'index.html' : decodeURIComponent(route.slice(1)) + '.html';
     const out = path.join(DIST, file);
     await fs.mkdir(path.dirname(out), { recursive: true });
     await fs.writeFile(out, html);

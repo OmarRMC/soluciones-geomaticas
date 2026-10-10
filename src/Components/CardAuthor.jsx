@@ -23,7 +23,7 @@ function CardAuthor() {
                 >
                     <main className={style.footer}>
                         <div className={style.informacion}>
-                            <p> Topografia , Godesia y Geomatica</p>
+                            <p> Topografía, Geodesia y Geomática</p>
                             <img loading='lazy' src={topografia} alt="" ></img>
                         </div>
                         <footer className={style.redes}>
