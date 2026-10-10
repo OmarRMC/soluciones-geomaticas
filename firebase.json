@@ -1,6 +1,8 @@
 {
   "hosting": {
     "public": "./dist",
+    "cleanUrls": true,
+    "trailingSlash": false,
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -22,10 +24,10 @@
       }
     ],
     "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      { "source": "/cursos/**", "destination": "/app-shell.html" },
+      { "source": "/blog/**", "destination": "/app-shell.html" },
+      { "source": "/servicio/**", "destination": "/app-shell.html" },
+      { "source": "/productos/**", "destination": "/app-shell.html" }
     ]
   }
 }

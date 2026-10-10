@@ -22,12 +22,13 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "blog:covers": "node scripts/generate-blog-covers.mjs"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.4",
+    "puppeteer": "^25.13.0",
     "sharp": "^0.34.5",
     "vite": "^7.3.1"
   }

@@ -6,6 +6,7 @@ import Topografia from "../Components/Services/Topografia";
 import Geodesia from "../Components/Services/Geodesia";
 import Sig from "../Components/Services/Sig";
 import bannerStyle from "../css/ContanerServicio.module.css";
+import NotFound from "./NotFound";
 
 const serviceTitles = {
     fotogrametria: 'Fotogrametria',
@@ -37,15 +38,18 @@ export default function BlogView() {
     }, []);
 
     const key = service_id?.toLowerCase();
-    const Layout = serviceComponents[key] || (() => <div></div>);
-    const title = serviceTitles[key] || service_id;
-    const description = serviceDescriptions[key] || '';
+    const Layout = serviceComponents[key];
+    if (!Layout) {
+        return <NotFound title="Servicio no encontrado" message="El servicio que buscas no existe." backTo="/servicios" backLabel="Ver servicios" />;
+    }
+    const title = serviceTitles[key];
+    const description = serviceDescriptions[key];
 
     return (
         <main>
             <Helmet>
                 <title>{title} | Soluciones Geomaticas</title>
-                <meta name="description" content={description || `Servicio de ${title} - Soluciones Geomaticas, Bolivia.`} />
+                <meta name="description" content={description} />
                 <link rel="canonical" href={`https://soluciones-geomaticas.web.app/servicio/${key}`} />
                 <meta property="og:title" content={`${title} | Soluciones Geomaticas`} />
                 <meta property="og:description" content={description} />

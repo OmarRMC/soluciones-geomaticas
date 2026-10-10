@@ -13,6 +13,7 @@ import DetalleCurso from './Routes/DetalleCurso';
 import BlogView from './Routes/BlogView';
 import BlogArticle from './Routes/BlogArticle';
 import WhatsAppFloat from './Components/WhatsAppFloat';
+import NotFound from './Routes/NotFound';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/productos/catalogo/:title" element={<ProductCatalog />} />
         <Route path="/productos/:producto_id" element={<Productos />} />
         <Route path="/productos/" element={<Productos />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
     <Footer></Footer>
